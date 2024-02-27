@@ -19,13 +19,13 @@ import {
   Tooltip,
 } from "devextreme-react/chart";
 
-const energySources = [
-  { value: "hydro", name: "Hydro-electric" },
-  { value: "oil", name: "Oil" },
-  { value: "gas", name: "Natural gas" },
-  { value: "coal", name: "Coal" },
-  { value: "nuclear", name: "Nuclear" },
-];
+// const energySources = [
+//   { value: "hydro", name: "Hydro-electric" },
+//   { value: "oil", name: "Oil" },
+//   { value: "gas", name: "Natural gas" },
+//   { value: "coal", name: "Coal" },
+//   { value: "nuclear", name: "Nuclear" },
+// ];
 const countriesInfo = [
   {
     country: "USA",
@@ -85,6 +85,21 @@ const TimeGraph = () => {
     setSwitchState((prevState) => !prevState);
   };
 
+  const energySources = switchState
+    ? [
+        { value: "hydro", name: "Hydro-electric" },
+        { value: "oil", name: "Oil" },
+        { value: "gas", name: "Natural gas" },
+        { value: "coal", name: "Coal" },
+
+      ]
+    : [
+        { value: "oil", name: "Oil" },
+        { value: "gas", name: "Natural gas" },
+        { value: "coal", name: "Coal" },
+    
+      ];
+
   return (
     <>
       <Chart id="chart" dataSource={countriesInfo} className=" h-72">
@@ -96,6 +111,7 @@ const TimeGraph = () => {
         {energySources.map((item) => (
           <Series key={item.value} valueField={item.value} name={item.name} />
         ))}
+
         <ArgumentAxis
           valueMarginsEnabled={false}
           discreteAxisDivisionMode="crossLabels"
