@@ -95,7 +95,7 @@ const TimeGraph = () => {
   const filteredEnergySources = energySources.filter((item) => !!item);
 
   return (
-    <div className="flex md:flex-row flex-col w-full border-2 border-gray-100 rounded-2xl shadow-2xl px-2">
+    <div className="flex md:flex-row flex-col w-full border-2 border-gray-100 rounded-2xl shadow-2xl px-2 py-4">
       <div className="p-4 md:w-3/4 w-full">
         <Chart id="chart" dataSource={countriesInfo} className="h-72">
           <CommonSeriesSettings type="spline" argumentField="country">
@@ -125,8 +125,8 @@ const TimeGraph = () => {
             itemTextPosition="bottom"
           />
 
-          <Title text="Energy Consumption in 2004">
-            <Subtitle text="(Millions of Tons, Oil Equivalent)" />
+          <Title text="Ambulance C Data">
+            {/* <Subtitle text="(Millions of Tons, Oil Equivalent)" /> */}
           </Title>
           <Export
             verticalAlignment="left"
