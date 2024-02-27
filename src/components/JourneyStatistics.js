@@ -12,11 +12,11 @@ import TimeGraph from "./shared/SecondGraph/TimeGraph";
 const JourneyStatistics = () => {
   return (
     <div className="w-100 flex flex-col gap-y-4" style={{ width: "100%" }}>
-      {/* <div
+      <div
         className="flex justify-between sm:p-8 p-2 w-full"
         style={{ width: "100%" }}
       >
-        <div className="sm:p-4 w-full" style={{ width: "100%" }}>
+        <div className="w-full" style={{ width: "100%" }}>
           <div
             className="flex w-full flex-wrap gap-x-4 gap-y-8"
             style={{ width: "100%" }}
@@ -73,9 +73,9 @@ const JourneyStatistics = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
-      <div className="flex p-2 gap-x-8  flex-wrap w-full gap-y-4">
+      <div className="flex gap-x-8  flex-wrap w-full gap-y-4 justify-center">
        
         <div className="md:w-1/4 w-full">
           <DataDisplay />
