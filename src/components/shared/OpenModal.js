@@ -7,11 +7,13 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 
+import { IoIosInformationCircleOutline } from "react-icons/io";
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
-const OpenModal = () => {
+const OpenModal = ({children}) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -24,8 +26,8 @@ const OpenModal = () => {
 
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Slide in alert dialog
+      <Button onClick={handleClickOpen}>
+        {children}
       </Button>
       <Dialog
         open={open}
@@ -34,16 +36,16 @@ const OpenModal = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle>{"Current Status"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            The speed limite on red means .....
+            Gsp vehicle on color means the car is to slow...
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose}>Agree</Button>
+          {/* <Button onClick={handleClose}>Disagree</Button> */}
+          <Button  onClick={handleClose}>Close</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
