@@ -82,6 +82,7 @@ const TimeGraph = () => {
   const [switchHydro, setSwitchHydro] = useState(true);
   const [switchOil, setSwitchOil] = useState(true);
   const [switchGas, setSwitchGas] = useState(true);
+  const [switchCoal, setSwitchCoal] = useState(true);
 
   const handleSwitchHydroChange = () => {
     setSwitchHydro((prevState) => !prevState);
@@ -95,7 +96,7 @@ const TimeGraph = () => {
     switchHydro ? { value: "hydro", name: "Hydro-electric" } : "",
     switchOil ? { value: "oil", name: "Oil" } : "",
     switchGas ? { value: "gas", name: "Natural gas" } : "",
-    { value: "coal", name: "Coal" },
+    switchCoal ? { value: "coal", name: "Coal" } : "",
   ];
 
   return (
@@ -141,6 +142,9 @@ const TimeGraph = () => {
         />
         <Tooltip enabled={true} />
       </Chart>
+     
+     
+     
       <Switch
         {...label}
         checked={switchHydro}
@@ -155,6 +159,12 @@ const TimeGraph = () => {
         onChange={() => setSwitchGas((prevState) => !prevState)}
       />
       <p>{switchGas ? "SwitchGas on" : "Switch off"}</p>
+      <Switch
+        {...label}
+        checked={switchCoal}
+        onChange={() => setSwitchCoal((prevState) => !prevState)}
+      />
+      <p>{switchCoal ? "SwitchCoal on" : "Switch off"}</p>
     </>
   );
 };
