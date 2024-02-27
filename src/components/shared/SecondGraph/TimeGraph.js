@@ -79,13 +79,13 @@ const countriesInfo = [
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 const TimeGraph = () => {
-  const [switchState, setSwitchState] = useState(true);
+  const [switchHydro, setSwitchHydro] = useState(true);
 
   const handleSwitchChange = () => {
-    setSwitchState((prevState) => !prevState);
+    setSwitchHydro((prevState) => !prevState);
   };
 
-  const energySources = switchState
+  const energySources = switchHydro
     ? [
         { value: "hydro", name: "Hydro-electric" },
         { value: "oil", name: "Oil" },
@@ -143,8 +143,8 @@ const TimeGraph = () => {
         />
         <Tooltip enabled={true} />
       </Chart>
-      <Switch {...label} checked={switchState} onChange={handleSwitchChange} />
-      <p>{switchState ? "Switch on" : "Switch off"}</p>
+      <Switch {...label} checked={switchHydro} onChange={handleSwitchChange} />
+      <p>{switchHydro ? "Switch on" : "Switch off"}</p>
     </>
   );
 };
