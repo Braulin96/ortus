@@ -29,21 +29,25 @@ const DataDisplay = () => {
     <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg py-4 px-6 w-72 flex flex-col overflow-y-auto">
       <div className="text-center space-y-4 my-auto">
         <h2 className="text-xl font-semibold">{selectedData.name}</h2>
-        <p className="text-5xl font-bold">
-          {selectedData.data}{" "}
-          <span className="text-sm font-normal -ml-2">{selectedData.unit}</span>
-        </p>
+        <div className="h-20 flex">
+          <p className="text-4xl font-bold m-auto">
+            {selectedData.data}
+            <span className="text-sm font-normal">{selectedData.unit}</span>
+          </p>
+        </div>
 
         <div className="m-auto text-center space-y-4">
           <div className="flex gap-x-4">
             {dataList.map((list, index) => (
-              <div
+              <button
                 key={index}
-                className={`p-4 text-sm cursor-pointer ${selectedData === list ? 'bg-blue-500' : 'bg-gray-200'}`}
+                className={`p-2 text-sm cursor-pointer rounded-lg ${
+                  selectedData === list ? "bg-blue-500" : "bg-gray-200"
+                }`}
                 onClick={() => handleItemClick(list)}
               >
                 {list.name}
-              </div>
+              </button>
             ))}
           </div>
         </div>
