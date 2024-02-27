@@ -19,13 +19,6 @@ import {
   Tooltip,
 } from "devextreme-react/chart";
 
-// const energySources = [
-//   { value: "hydro", name: "Hydro-electric" },
-//   { value: "oil", name: "Oil" },
-//   { value: "gas", name: "Natural gas" },
-//   { value: "coal", name: "Coal" },
-//   { value: "nuclear", name: "Nuclear" },
-// ];
 const countriesInfo = [
   {
     country: "USA",
@@ -99,10 +92,10 @@ const TimeGraph = () => {
     switchCoal ? { value: "coal", name: "Coal" } : "",
   ];
 
-  const filteredEnergySources = energySources.filter(item => !!item);
+  const filteredEnergySources = energySources.filter((item) => !!item);
 
   return (
-    <>
+    <div>
       <Chart id="chart" dataSource={countriesInfo} className=" h-72">
         <CommonSeriesSettings type="spline" argumentField="country">
           {/* <Point hoversMode="allArgumentPoints" /> */}
@@ -144,30 +137,42 @@ const TimeGraph = () => {
         />
         <Tooltip enabled={true} />
       </Chart>
-     
-     
-     
-      <Switch
-        {...label}
-        checked={switchHydro}
-        onChange={handleSwitchHydroChange}
-      />
-      <p>{switchHydro ? "SwitchHydro on" : "Switch off"}</p>
-      <Switch {...label} checked={switchOil} onChange={handleSwitchOilChange} />
-      <p>{switchOil ? "SwitchOil on" : "Switch off"}</p>
-      <Switch
-        {...label}
-        checked={switchGas}
-        onChange={() => setSwitchGas((prevState) => !prevState)}
-      />
-      <p>{switchGas ? "SwitchGas on" : "Switch off"}</p>
-      <Switch
-        {...label}
-        checked={switchCoal}
-        onChange={() => setSwitchCoal((prevState) => !prevState)}
-      />
-      <p>{switchCoal ? "SwitchCoal on" : "Switch off"}</p>
-    </>
+
+      <div>
+        <div className="flex">
+          <Switch
+            {...label}
+            checked={switchHydro}
+            onChange={handleSwitchHydroChange}
+          />
+          <p className="my-auto">999</p>
+        </div>
+        <div className="flex">
+          <Switch
+            {...label}
+            checked={switchOil}
+            onChange={handleSwitchOilChange}
+          />
+          <p className="my-auto">Body Blues</p>
+        </div>
+        <div className="flex">
+          <Switch
+            {...label}
+            checked={switchGas}
+            onChange={() => setSwitchGas((prevState) => !prevState)}
+          />
+          <p className="my-auto">Grile Wing</p>
+        </div>
+        <div className="flex">
+          <Switch
+            {...label}
+            checked={switchCoal}
+            onChange={() => setSwitchCoal((prevState) => !prevState)}
+          />
+          <p className="my-auto">Rear Blues</p>
+        </div>
+      </div>
+    </div>
   );
 };
 export default TimeGraph;
