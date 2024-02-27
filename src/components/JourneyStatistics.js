@@ -6,6 +6,7 @@ import { RiGpsFill } from "react-icons/ri";
 import { BiSolidAmbulance } from "react-icons/bi";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import OpenModal from "./shared/OpenModal";
+import DataDisplay from "./shared/DataDisplay";
 
 const JourneyStatistics = () => {
   return (
@@ -57,7 +58,7 @@ const JourneyStatistics = () => {
                     className="my-auto"
                   />
                   <p className="my-auto ">
-                    Vehicle Speed:{" "}
+                    Vehicle Speed:
                     <span className="text-xl font-bold text-[#0FD6F5]">
                       223
                     </span>
@@ -66,9 +67,15 @@ const JourneyStatistics = () => {
               </div>
             </div>
           </div>
-          <div>graphic 2</div>
+          
         </div>
+        
       </div>
+      <div className="p-20">
+      <DataDisplay/>
+
+      </div>
+      
     </div>
   );
 };
