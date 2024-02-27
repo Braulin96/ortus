@@ -39,7 +39,7 @@ const DataDisplay = () => {
             {dataList.map((list, index) => (
               <div
                 key={index}
-                className="p-4 text-sm cursor-pointer"
+                className={`p-4 text-sm cursor-pointer ${selectedData === list ? 'bg-blue-500' : 'bg-gray-200'}`}
                 onClick={() => handleItemClick(list)}
               >
                 {list.name}
