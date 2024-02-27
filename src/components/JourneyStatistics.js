@@ -11,20 +11,26 @@ import TimeGraph from "./shared/SecondGraph/TimeGraph";
 
 const JourneyStatistics = () => {
   return (
-    <div className="w-100" style={{ width: "100%" }}>
-      <div className="flex justify-between p-8 gap-x-4 ">
-        <div className="bg-green-200 w-1/3 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out">
-          <Location />
-        </div>
-        <div className="p-4 w-full">
-          <div className="flex gap-x-4">
-            <div className="w-2/3 shadow-lg rounded-2xl p-4">
+    <div className="w-100 flex flex-col gap-y-4" style={{ width: "100%" }}>
+      <div
+        className="flex justify-between p-8 w-full"
+        style={{ width: "100%" }}
+      >
+        <div className="p-4 w-full" style={{ width: "100%" }}>
+          <div
+            className="flex w-full flex-wrap gap-x-4"
+            style={{ width: "100%" }}
+          >
+            <div className="w-1/4 mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg">
+              <Location />
+              heelo
+            </div>
+
+            <div className="w-2/4  shadow-lg rounded-2xl p-4">
               <SpeedGpsGraph />
             </div>
 
-            <div className="h-80 rounded-2xl shadow-lg py-4 px-6 w-72 flex flex-col">
-              {/* <ExpandAccordion time="Time: 09:03:45" gps="GPS Speed: 123 Km/h" vehicle="Vehicle Speed: 223km/h"
-            description="some more usefull informations can be added"/> */}
+            <div className="w-1/5 h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col">
               <div className="flex justify-between">
                 <h2 className="text-lg">Current Status</h2>
                 <OpenModal>
@@ -36,7 +42,7 @@ const JourneyStatistics = () => {
                 <div className="flex gap-x-2">
                   <FaClock color="#5E6583" size={30} className="my-auto" />
                   <p className="my-auto">
-                    Time:{" "}
+                    Time:
                     <span className="text-xl font-bold text-[#0FD6F5]">
                       09:03:45
                     </span>
@@ -69,6 +75,7 @@ const JourneyStatistics = () => {
           </div>
         </div>
       </div>
+
       <div className="flex p-8 gap-x-8">
         <div>
           <DataDisplay />
