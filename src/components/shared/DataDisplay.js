@@ -65,16 +65,16 @@ const DataDisplay = () => {
                 breakpoints={{
                   // Customize the number of slides per view for different screen sizes
                   240: {
-                    slidesPerView: 3, // Show 1 slide per view on screens 640px wide and above
+                    slidesPerView: 3, 
                   },
                   640: {
-                    slidesPerView: 3, // Show 1 slide per view on screens 640px wide and above
+                    slidesPerView: 3, 
                   },
                   768: {
-                    slidesPerView: 2, // Show 2 slides per view on screens 768px wide and above
+                    slidesPerView: 2,
                   },
                   1024: {
-                    slidesPerView: 3, // Show 3 slides per view on screens 1024px wide and above
+                    slidesPerView: 3, 
                   },
                 }}
               >

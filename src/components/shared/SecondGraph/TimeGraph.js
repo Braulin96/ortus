@@ -95,8 +95,8 @@ const TimeGraph = () => {
   const filteredEnergySources = energySources.filter((item) => !!item);
 
   return (
-    <div className="flex w-full border-2 border-gray-100 rounded-2xl shadow-2xl px-2">
-      <div className="p-4 w-full">
+    <div className="flex md:flex-row flex-col w-full border-2 border-gray-100 rounded-2xl shadow-2xl px-2">
+      <div className="p-4 md:w-3/4 w-full">
         <Chart id="chart" dataSource={countriesInfo} className="h-72">
           <CommonSeriesSettings type="spline" argumentField="country">
             {/* <Point hoversMode="allArgumentPoints" /> */}
@@ -138,7 +138,7 @@ const TimeGraph = () => {
         </Chart>
       </div>
 
-      {/* <div className="px-8 my-4 py-4 w-60 flex flex-col shadow-xl rounded-2xl border-2 border-gray-100">
+      <div className="px-8 my-4 py-4 md:flex flex-col w-1/4 hidden">
         <h3 className="text-center mb-4 text-lg"> Graphic</h3>
         <div className="flex">
           <Switch
@@ -172,7 +172,49 @@ const TimeGraph = () => {
           />
           <p className="my-auto">Rear Blues</p>
         </div>
-      </div> */}
+      </div>
+
+      <div className="md:hidden flex flex-col">
+        <h3 className="text-center mb-4 text-lg"> Graphic</h3>
+        <div className="flex justify-around w-full">
+          <div>
+            <div className="flex">
+              <Switch
+                {...label}
+                checked={switchHydro}
+                onChange={handleSwitchHydroChange}
+              />
+              <p className="my-auto">999</p>
+            </div>
+            <div className="flex">
+              <Switch
+                {...label}
+                checked={switchOil}
+                onChange={handleSwitchOilChange}
+              />
+              <p className="my-auto">Body Blues</p>
+            </div>
+          </div>
+          <div>
+            <div className="flex">
+              <Switch
+                {...label}
+                checked={switchGas}
+                onChange={() => setSwitchGas((prevState) => !prevState)}
+              />
+              <p className="my-auto">Grile Wing</p>
+            </div>
+            <div className="flex">
+              <Switch
+                {...label}
+                checked={switchCoal}
+                onChange={() => setSwitchCoal((prevState) => !prevState)}
+              />
+              <p className="my-auto">Rear Blues</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
