@@ -43,7 +43,7 @@ const DataDisplay = () => {
 
   return (
     <>
-      <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg  w-72 flex flex-col overflow-hidden">
+      <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg  w-72 flex flex-col overflow-hidden w-full">
         <div className="text-center space-y-4 my-auto py-4 px-6">
           <h2 className="text-lg font-semibold">{selectedData.name}</h2>
           <div className="h-20 flex">

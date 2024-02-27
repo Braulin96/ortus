@@ -96,7 +96,7 @@ const TimeGraph = () => {
 
   return (
     <div className="flex w-full border-2 border-gray-100 rounded-2xl shadow-2xl px-2">
-      <div className="flex-grow p-4">
+      <div className="p-4 w-full">
         <Chart id="chart" dataSource={countriesInfo} className="h-72">
           <CommonSeriesSettings type="spline" argumentField="country">
             {/* <Point hoversMode="allArgumentPoints" /> */}
@@ -105,7 +105,6 @@ const TimeGraph = () => {
           {filteredEnergySources.map((item) => (
             <Series key={item.value} valueField={item.value} name={item.name} />
           ))}
-
           <ArgumentAxis
             valueMarginsEnabled={false}
             discreteAxisDivisionMode="crossLabels"
@@ -139,7 +138,7 @@ const TimeGraph = () => {
         </Chart>
       </div>
 
-      <div className="px-8 my-4 py-4 w-60 flex flex-col shadow-xl rounded-2xl border-2 border-gray-100">
+      {/* <div className="px-8 my-4 py-4 w-60 flex flex-col shadow-xl rounded-2xl border-2 border-gray-100">
         <h3 className="text-center mb-4 text-lg"> Graphic</h3>
         <div className="flex">
           <Switch
@@ -173,7 +172,7 @@ const TimeGraph = () => {
           />
           <p className="my-auto">Rear Blues</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
