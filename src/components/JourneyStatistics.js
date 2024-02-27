@@ -1,4 +1,5 @@
 import Location from "./shared/Location";
+import SpeedGpsGraph from "./shared/FirstGraph/SpeedGpsGraph";
 
 const JourneyStatistics = () => {
   return (
@@ -13,10 +14,8 @@ const JourneyStatistics = () => {
           <div>graphic 2</div>
         </div>
       </div>
+      <SpeedGpsGraph/>
 
-      {/* <div className="bg-red-200 w-80 h-80">
-        <Location />
-      </div> */}
     </div>
   );
 };
