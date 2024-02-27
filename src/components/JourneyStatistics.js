@@ -16,25 +16,17 @@ const JourneyStatistics = () => {
               <SpeedGpsGraph />
             </div>
 
-            <div className="shadow-xl bg-[#f5f5f w-80 h-80 rounded-2xl p-4">
-              <div className="flex justify-between">
-                <div>
-                  <h2> Current Status </h2>
-                  <p>Time: 09:03:45</p>
-                  <p>GPS Speed: 1322 km/h</p>
-                  <p>Vehicle Speed: 223 km/h</p>
-                </div>
-                <div>
-                    selector 
-                </div>
-                <ExpandAccordion/>
-              </div>
+            <div className="w-80 h-80 rounded-2xl ">
+            <ExpandAccordion time="Time: 09:03:45" gps="GPS Speed: 123 Km/h" vehicle="Vehicle Speed: 223km/h"
+            description="some more usefull informations can be added"/>
             </div>
           </div>
           <div>graphic 2</div>
         </div>
+       
       </div>
-      <SpeedGpsGraph />
+    
+      
     </div>
   );
 };

@@ -6,20 +6,31 @@ import Typography from "@mui/material/Typography";
 // Note: images/icons
 import { IoIosArrowDown } from "react-icons/io";
 
-const ExpandAccordion = ({ question, answer }) => {
+const ExpandAccordion = ({
+  description,
+  gps,
+  vehicle,
+  time,
+}) => {
   return (
-    <div className="flex flex-grow text-[#00284F]">
-      <Accordion className="w-full">
+    <div className="flex flex-grow ">
+      <Accordion className="w-full px-1">
         <AccordionSummary
-          expandIcon={<IoIosArrowDown color="#00284F" />}
+          expandIcon={<IoIosArrowDown color="black" />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className="text-[#00284F]">{question}, text</Typography>
+          <Typography className="">
+            <h2 className="mb-2 text-lg">Current Status</h2>
+            <p> {time}</p>
+            <p> {gps}</p>
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography className="text-[#00284F]">
-            {answer} answer test
+        <AccordionDetails className="-mt-4">
+          <Typography className="flex flex-col gap-y-2">
+            
+            <p> {vehicle}</p>
+            <p> {description} </p>
           </Typography>
         </AccordionDetails>
       </Accordion>
