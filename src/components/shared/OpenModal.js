@@ -5,8 +5,13 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
 
-const OpenModal =() => {
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="down" ref={ref} {...props} />;
+});
+
+const OpenModal = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -20,31 +25,28 @@ const OpenModal =() => {
   return (
     <React.Fragment>
       <Button variant="outlined" onClick={handleClickOpen}>
-        Open alert dialog
+        Slide in alert dialog
       </Button>
       <Dialog
         open={open}
+        TransitionComponent={Transition}
+        keepMounted
         onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
+        aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+        <DialogTitle>{"Use Google's location service?"}</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+          <DialogContentText id="alert-dialog-slide-description">
             Let Google help apps determine location. This means sending anonymous
             location data to Google, even when no apps are running.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
-          </Button>
+          <Button onClick={handleClose}>Agree</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
   );
-}
-export default OpenModal
+} 
+export  default  OpenModal
