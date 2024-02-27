@@ -82,7 +82,7 @@ const DataDisplay = () => {
                   <SwiperSlide className="flex gap-x-4 mr-4">
                     <button
                       key={index}
-                      className={`p-3 text-sm cursor-pointer rounded-lg transition-all duration-600 ${
+                      className={`p-3 w-24 text-sm cursor-pointer rounded-lg transition-all duration-600 ${
                         selectedData === list
                           ? "bg-cyan-300 bg-opacity-30"
                           : "bg-gray-100"
