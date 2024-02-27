@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import OpenModal from "./OpenModal";
 
 const dataList = [
   {
@@ -16,6 +17,16 @@ const dataList = [
     data: "Fox Street Studio",
     unit: "",
   },
+  {
+    name: "End Location",
+    data: "Fox Street Studio",
+    unit: "",
+  },
+  {
+    name: "Highest Speed",
+    data: "39",
+    unit: "MP",
+  },
 ];
 
 const DataDisplay = () => {
@@ -26,9 +37,9 @@ const DataDisplay = () => {
   };
 
   return (
-    <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg py-4 px-6 w-72 flex flex-col overflow-y-auto">
-      <div className="text-center space-y-4 my-auto">
-        <h2 className="text-xl font-semibold">{selectedData.name}</h2>
+    <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg  w-72 flex flex-col overflow-hidden">
+      <div className="text-center space-y-4 my-auto py-4 px-6">
+        <h2 className="text-lg font-semibold">{selectedData.name}</h2>
         <div className="h-20 flex">
           <p className="text-4xl font-bold m-auto">
             {selectedData.data}
@@ -36,13 +47,15 @@ const DataDisplay = () => {
           </p>
         </div>
 
-        <div className="m-auto text-center space-y-4">
+        <div className="m-auto text-center space-y-4 pt-2">
           <div className="flex gap-x-4">
             {dataList.map((list, index) => (
               <button
                 key={index}
-                className={`p-2 text-sm cursor-pointer rounded-lg ${
-                  selectedData === list ? "bg-blue-500" : "bg-gray-200"
+                className={`p-2 text-sm cursor-pointer rounded-lg transition-all duration-600 ${
+                  selectedData === list
+                    ? "bg-cyan-300 bg-opacity-30"
+                    : "bg-gray-100"
                 }`}
                 onClick={() => handleItemClick(list)}
               >
@@ -51,6 +64,11 @@ const DataDisplay = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="bg-cyan-300  py-2 px-2 w-full text-black flex justify-center">
+        <OpenModal>
+          <p className="text-gray-800 mx-auto">Know More</p>
+        </OpenModal>
       </div>
     </div>
   );
