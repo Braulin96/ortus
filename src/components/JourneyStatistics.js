@@ -13,24 +13,23 @@ const JourneyStatistics = () => {
   return (
     <div className="w-100 flex flex-col gap-y-4" style={{ width: "100%" }}>
       <div
-        className="flex justify-between p-8 w-full"
+        className="flex justify-between sm:p-8 p-2 w-full"
         style={{ width: "100%" }}
       >
-        <div className="p-4 w-full" style={{ width: "100%" }}>
+        <div className="sm:p-4 w-full" style={{ width: "100%" }}>
           <div
             className="flex w-full flex-wrap gap-x-4"
             style={{ width: "100%" }}
           >
-            <div className="w-1/4 mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg">
+            <div className="xl:w-1/4 sm:w-1/2 w-full mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg">
               <Location />
-              heelo
             </div>
 
-            <div className="w-2/4  shadow-lg rounded-2xl p-4">
+            <div className="xl:w-2/4 xl:order-none order-last w-full shadow-lg rounded-2xl sm:p-4">
               <SpeedGpsGraph />
             </div>
 
-            <div className="w-1/5 h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col">
+            <div className="xl:w-1/5 flex-grow h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col">
               <div className="flex justify-between">
                 <h2 className="text-lg">Current Status</h2>
                 <OpenModal>
@@ -76,14 +75,14 @@ const JourneyStatistics = () => {
         </div>
       </div>
 
-      <div className="flex p-8 gap-x-8">
+      {/* <div className="flex p-8 gap-x-8">
         <div>
           <DataDisplay />
         </div>
         <div className="w-full">
           <TimeGraph />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
