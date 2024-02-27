@@ -95,50 +95,52 @@ const TimeGraph = () => {
   const filteredEnergySources = energySources.filter((item) => !!item);
 
   return (
-    <div>
-      <Chart id="chart" dataSource={countriesInfo} className=" h-72">
-        <CommonSeriesSettings type="spline" argumentField="country">
-          {/* <Point hoversMode="allArgumentPoints" /> */}
-          <Point visible={false} />
-        </CommonSeriesSettings>
+    <div className="flex w-full">
+      <div className="w-2/3 border-2 border-gray-100 shadow-2xl p-4 rounded-2xl">
+        <Chart id="chart" dataSource={countriesInfo} className="h-72">
+          <CommonSeriesSettings type="spline" argumentField="country">
+            {/* <Point hoversMode="allArgumentPoints" /> */}
+            <Point visible={false} />
+          </CommonSeriesSettings>
 
-        {filteredEnergySources.map((item) => (
-          <Series key={item.value} valueField={item.value} name={item.name} />
-        ))}
+          {filteredEnergySources.map((item) => (
+            <Series key={item.value} valueField={item.value} name={item.name} />
+          ))}
 
-        <ArgumentAxis
-          valueMarginsEnabled={false}
-          discreteAxisDivisionMode="crossLabels"
-        >
-          <Grid visible={false} />
-        </ArgumentAxis>
-        <ValueAxis>
-          <Grid visible={false} />
-        </ValueAxis>
-        <Crosshair enabled={false} color="#949494" width={3} dashStyle="dot">
-          <Label visible={false} backgroundColor="#949494">
-            <Font color="#fff" size={12} />
-          </Label>
-        </Crosshair>
-        <Legend
-          verticalAlignment="left"
-          horizontalAlignment="center"
-          itemTextPosition="bottom"
-        />
+          <ArgumentAxis
+            valueMarginsEnabled={false}
+            discreteAxisDivisionMode="crossLabels"
+          >
+            <Grid visible={false} />
+          </ArgumentAxis>
+          <ValueAxis>
+            <Grid visible={false} />
+          </ValueAxis>
+          <Crosshair enabled={false} color="#949494" width={3} dashStyle="dot">
+            <Label visible={false} backgroundColor="#949494">
+              <Font color="#fff" size={12} />
+            </Label>
+          </Crosshair>
+          <Legend
+            verticalAlignment="left"
+            horizontalAlignment="center"
+            itemTextPosition="bottom"
+          />
 
-        <Title text="Energy Consumption in 2004">
-          <Subtitle text="(Millions of Tons, Oil Equivalent)" />
-        </Title>
-        <Export
-          verticalAlignment="left"
-          horizontalAlignment="center"
-          itemTextPosition="bottom"
-          enabled={true}
-        />
-        <Tooltip enabled={true} />
-      </Chart>
+          <Title text="Energy Consumption in 2004">
+            <Subtitle text="(Millions of Tons, Oil Equivalent)" />
+          </Title>
+          <Export
+            verticalAlignment="left"
+            horizontalAlignment="center"
+            itemTextPosition="bottom"
+            enabled={true}
+          />
+          <Tooltip enabled={true} />
+        </Chart>
+      </div>
 
-      <div>
+      <div className=" p-4 rounded-2xl border-2 border-gray-100 shadow-2xl">
         <div className="flex">
           <Switch
             {...label}
