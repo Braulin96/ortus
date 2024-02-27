@@ -43,8 +43,8 @@ const DataDisplay = () => {
 
   return (
     <>
-      <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg  w-72 flex flex-col overflow-hidden w-full">
-        <div className="text-center space-y-4 my-auto py-4 px-6">
+      <div className="border-2 border-gray-100 h-80 rounded-2xl shadow-lg  flex flex-col overflow-hidden w-full">
+        <div className="text-center space-y-4 my-auto py-4 px-2">
           <h2 className="text-lg font-semibold">{selectedData.name}</h2>
           <div className="h-20 flex">
             <p className="text-4xl font-bold m-auto">
@@ -57,11 +57,26 @@ const DataDisplay = () => {
             <div className="flex gap-x-4">
               <Swiper
                 className="flex w-full space-x-4"
-                slidesPerView={3}
+                //slidesPerView={2}
                 loop={true}
                 centeredSlides={false}
                 //spaceBetween={0}
                 grabCursor={true}
+                breakpoints={{
+                  // Customize the number of slides per view for different screen sizes
+                  240: {
+                    slidesPerView: 3, // Show 1 slide per view on screens 640px wide and above
+                  },
+                  640: {
+                    slidesPerView: 3, // Show 1 slide per view on screens 640px wide and above
+                  },
+                  768: {
+                    slidesPerView: 2, // Show 2 slides per view on screens 768px wide and above
+                  },
+                  1024: {
+                    slidesPerView: 3, // Show 3 slides per view on screens 1024px wide and above
+                  },
+                }}
               >
                 {dataList.map((list, index) => (
                   <SwiperSlide className="flex gap-x-4 mr-4">
@@ -82,13 +97,12 @@ const DataDisplay = () => {
             </div>
           </div>
         </div>
-        <div className="bg-cyan-300  py-2 px-2 w-full text-black flex justify-center">
+        <div className="bg-cyan-300  py-2  w-full text-black flex justify-center">
           <OpenModal>
             <p className="text-gray-800 mx-auto">Know More</p>
           </OpenModal>
         </div>
       </div>
-    
     </>
   );
 };
