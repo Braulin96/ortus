@@ -4,6 +4,9 @@ import ExpandAccordion from "./shared/ExpandAccordion";
 import { FaClock } from "react-icons/fa6";
 import { RiGpsFill } from "react-icons/ri";
 import { BiSolidAmbulance } from "react-icons/bi";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import OpenModal from "./shared/OpenModal";
+
 
 
 const JourneyStatistics = () => {
@@ -25,7 +28,7 @@ const JourneyStatistics = () => {
             description="some more usefull informations can be added"/> */}
             <div className="flex justify-between">
             <h2 className="text-lg">Current Status</h2>
-            <p> i</p>
+            <IoIosInformationCircleOutline size={20} />
 
             </div>
              
@@ -46,6 +49,7 @@ const JourneyStatistics = () => {
             </div>
           </div>
           <div>graphic 2</div>
+          <OpenModal/>
         </div>
       </div>
     </div>
