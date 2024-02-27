@@ -99,15 +99,17 @@ const TimeGraph = () => {
     switchCoal ? { value: "coal", name: "Coal" } : "",
   ];
 
+  const filteredEnergySources = energySources.filter(item => !!item);
+
   return (
     <>
       <Chart id="chart" dataSource={countriesInfo} className=" h-72">
         <CommonSeriesSettings type="spline" argumentField="country">
-          {/* <Point hoverMode="allArgumentPoints" /> */}
+          {/* <Point hoversMode="allArgumentPoints" /> */}
           <Point visible={false} />
         </CommonSeriesSettings>
 
-        {energySources.map((item) => (
+        {filteredEnergySources.map((item) => (
           <Series key={item.value} valueField={item.value} name={item.name} />
         ))}
 
