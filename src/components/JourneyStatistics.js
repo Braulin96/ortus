@@ -7,6 +7,7 @@ import { BiSolidAmbulance } from "react-icons/bi";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import OpenModal from "./shared/OpenModal";
 import DataDisplay from "./shared/DataDisplay";
+import TimeGraph from "./shared/SecondGraph/TimeGraph";
 
 const JourneyStatistics = () => {
   return (
@@ -15,7 +16,6 @@ const JourneyStatistics = () => {
         <div className="bg-green-200 w-1/3 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <Location />
         </div>
-
         <div className="p-4 w-full">
           <div className="flex gap-x-4">
             <div className="w-2/3 shadow-lg rounded-2xl p-4">
@@ -45,7 +45,7 @@ const JourneyStatistics = () => {
                 <div className="flex gap-x-2">
                   <RiGpsFill color="#5E6583" size={30} className="my-auto" />
                   <p className="my-auto ">
-                    GPS Speed:{" "}
+                    GPS Speed:
                     <span className="text-xl font-bold text-[#0FD6F5]">
                       123
                     </span>
@@ -67,15 +67,14 @@ const JourneyStatistics = () => {
               </div>
             </div>
           </div>
-          
         </div>
-        
       </div>
       <div className="p-20">
-      <DataDisplay/>
-
+        <DataDisplay />
       </div>
-      
+      <div className="p-20">
+        <TimeGraph />
+      </div>
     </div>
   );
 };
