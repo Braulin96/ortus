@@ -95,14 +95,13 @@ const TimeGraph = () => {
   const filteredEnergySources = energySources.filter((item) => !!item);
 
   return (
-    <div className="flex w-full">
-      <div className="w-2/3 border-2 border-gray-100 shadow-2xl p-4 rounded-2xl">
+    <div className="flex w-full border-2 border-gray-100 rounded-2xl shadow-2xl p-4">
+      <div className="flex-grow p-4">
         <Chart id="chart" dataSource={countriesInfo} className="h-72">
           <CommonSeriesSettings type="spline" argumentField="country">
             {/* <Point hoversMode="allArgumentPoints" /> */}
             <Point visible={false} />
           </CommonSeriesSettings>
-
           {filteredEnergySources.map((item) => (
             <Series key={item.value} valueField={item.value} name={item.name} />
           ))}
@@ -140,7 +139,8 @@ const TimeGraph = () => {
         </Chart>
       </div>
 
-      <div className=" p-4 rounded-2xl border-2 border-gray-100 shadow-2xl">
+      <div className="px-8 py-4 w-60 flex flex-col shadow-xl rounded-2xl border-2 border-gray-100">
+        <h3 className="text-center mb-4 text-lg"> Graphic</h3>
         <div className="flex">
           <Switch
             {...label}
