@@ -20,7 +20,8 @@ import { energySources, countriesInfo } from "./data.js";
 
 const SpeedGpsGraph = () => {
   return (
-    <Chart id="chart" dataSource={countriesInfo} className=" h-72">
+
+    <Chart id="chart" dataSource={countriesInfo} className="h-72">
       <CommonSeriesSettings type="spline" argumentField="country">
         {/* <Point hoverMode="allArgumentPoints" /> */}
         <Point visible={false} />
@@ -59,6 +60,7 @@ const SpeedGpsGraph = () => {
        enabled={true} />
       <Tooltip enabled={true} />
     </Chart>
+
   );
 };
 export default SpeedGpsGraph;

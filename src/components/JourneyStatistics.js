@@ -12,7 +12,7 @@ import TimeGraph from "./shared/SecondGraph/TimeGraph";
 const JourneyStatistics = () => {
   return (
     <div className="w-100" style={{ width: "100%" }}>
-      <div className="flex justify-between px-4 gap-x-4 py-8">
+      <div className="flex justify-between p-8 gap-x-4 ">
         <div className="bg-green-200 w-1/3 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <Location />
         </div>
@@ -69,11 +69,13 @@ const JourneyStatistics = () => {
           </div>
         </div>
       </div>
-      <div className="p-20">
-        <DataDisplay />
-      </div>
-      <div className="p-20">
-        <TimeGraph />
+      <div className="flex p-8 gap-x-8">
+        <div>
+          <DataDisplay />
+        </div>
+        <div className="w-full">
+          <TimeGraph />
+        </div>
       </div>
     </div>
   );
