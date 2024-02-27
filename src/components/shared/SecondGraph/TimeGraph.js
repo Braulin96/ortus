@@ -80,25 +80,23 @@ const countriesInfo = [
 const label = { inputProps: { "aria-label": "Switch demo" } };
 const TimeGraph = () => {
   const [switchHydro, setSwitchHydro] = useState(true);
+  const [switchOil, setSwitchOil] = useState(true);
+  const [switchGas, setSwitchGas] = useState(true);
 
-  const handleSwitchChange = () => {
+  const handleSwitchHydroChange = () => {
     setSwitchHydro((prevState) => !prevState);
   };
 
-  const energySources = switchHydro
-    ? [
-        { value: "hydro", name: "Hydro-electric" },
-        { value: "oil", name: "Oil" },
-        { value: "gas", name: "Natural gas" },
-        { value: "coal", name: "Coal" },
+  const handleSwitchOilChange = () => {
+    setSwitchOil((prevState) => !prevState);
+  };
 
-      ]
-    : [
-        { value: "oil", name: "Oil" },
-        { value: "gas", name: "Natural gas" },
-        { value: "coal", name: "Coal" },
-    
-      ];
+  const energySources = [
+    switchHydro ? { value: "hydro", name: "Hydro-electric" } : "",
+    switchOil ? { value: "oil", name: "Oil" } : "",
+    switchGas ? { value: "gas", name: "Natural gas" } : "",
+    { value: "coal", name: "Coal" },
+  ];
 
   return (
     <>
@@ -143,8 +141,20 @@ const TimeGraph = () => {
         />
         <Tooltip enabled={true} />
       </Chart>
-      <Switch {...label} checked={switchHydro} onChange={handleSwitchChange} />
-      <p>{switchHydro ? "Switch on" : "Switch off"}</p>
+      <Switch
+        {...label}
+        checked={switchHydro}
+        onChange={handleSwitchHydroChange}
+      />
+      <p>{switchHydro ? "SwitchHydro on" : "Switch off"}</p>
+      <Switch {...label} checked={switchOil} onChange={handleSwitchOilChange} />
+      <p>{switchOil ? "SwitchOil on" : "Switch off"}</p>
+      <Switch
+        {...label}
+        checked={switchGas}
+        onChange={() => setSwitchGas((prevState) => !prevState)}
+      />
+      <p>{switchGas ? "SwitchGas on" : "Switch off"}</p>
     </>
   );
 };
