@@ -1,6 +1,10 @@
 import Location from "./shared/Location";
 import SpeedGpsGraph from "./shared/FirstGraph/SpeedGpsGraph";
 import ExpandAccordion from "./shared/ExpandAccordion";
+import { FaClock } from "react-icons/fa6";
+import { RiGpsFill } from "react-icons/ri";
+import { BiSolidAmbulance } from "react-icons/bi";
+
 
 const JourneyStatistics = () => {
   return (
@@ -16,17 +20,34 @@ const JourneyStatistics = () => {
               <SpeedGpsGraph />
             </div>
 
-            <div className="w-80 h-80 rounded-2xl ">
-            <ExpandAccordion time="Time: 09:03:45" gps="GPS Speed: 123 Km/h" vehicle="Vehicle Speed: 223km/h"
-            description="some more usefull informations can be added"/>
+            <div className="h-80 rounded-2xl shadow-lg py-4 px-6 w-72 flex flex-col">
+              {/* <ExpandAccordion time="Time: 09:03:45" gps="GPS Speed: 123 Km/h" vehicle="Vehicle Speed: 223km/h"
+            description="some more usefull informations can be added"/> */}
+            <div className="flex justify-between">
+            <h2 className="text-lg">Current Status</h2>
+            <p> i</p>
+
+            </div>
+             
+              <div className="m-auto space-y-4">
+                <div className="flex gap-x-2">
+                  <FaClock color="#5E6583" size={30} className="my-auto" />
+                  <p className="my-auto">Time: <span className="text-xl font-bold text-[#0FD6F5]">09:03:45</span></p>
+                </div>
+                <div className="flex gap-x-2">
+                  <RiGpsFill color="#5E6583" size={30} className="my-auto" />
+                  <p className="my-auto ">GPS Speed: <span className="text-xl font-bold text-[#0FD6F5]">123</span></p>
+                </div>
+                <div className="flex gap-x-2">
+                  <BiSolidAmbulance color="#5E6583" size={30} className="my-auto" />
+                  <p className="my-auto ">Vehicle Speed: <span className="text-xl font-bold text-[#0FD6F5]">223</span></p>
+                </div>
+              </div>
             </div>
           </div>
           <div>graphic 2</div>
         </div>
-       
       </div>
-    
-      
     </div>
   );
 };
