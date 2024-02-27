@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 import {
   Chart,
   CommonSeriesSettings,
   Series,
   ArgumentAxis,
+  ValueAxis,
   Grid,
   Crosshair,
   Export,
@@ -14,54 +15,38 @@ import {
   Title,
   Subtitle,
   Tooltip,
-} from 'devextreme-react/chart';
-import { energySources, countriesInfo } from './data.js';
+} from "devextreme-react/chart";
+import { energySources, countriesInfo } from "./data.js";
 
 const SpeedGpsGraph = () => {
   return (
-    <Chart
-      id="chart"
-      dataSource={countriesInfo}
-    >
-      <CommonSeriesSettings
-        type="spline"
-        argumentField="country"
-      >
-        <Point hoverMode="allArgumentPoints" />
+    <Chart id="chart" dataSource={countriesInfo}>
+      <CommonSeriesSettings type="spline" argumentField="country">
+        {/* <Point hoverMode="allArgumentPoints" /> */}
+        <Point visible={false} />
       </CommonSeriesSettings>
+
       {energySources.map((item) => (
-        <Series
-          key={item.value}
-          valueField={item.value}
-          name={item.name}
-        />
+        <Series key={item.value} valueField={item.value} name={item.name} />
       ))}
       <ArgumentAxis
         valueMarginsEnabled={false}
         discreteAxisDivisionMode="crossLabels"
       >
-        <Grid visible={true} />
+        <Grid visible={false} />
       </ArgumentAxis>
-      <Crosshair
-        enabled={true}
-        color="#949494"
-        width={3}
-        dashStyle="dot"
-      >
-        <Label
-          visible={true}
-          backgroundColor="#949494"
-        >
-          <Font
-            color="#fff"
-            size={12}
-          />
+      <ValueAxis>
+        <Grid visible={false} />
+      </ValueAxis>
+      <Crosshair enabled={false} color="#949494" width={3} dashStyle="dot">
+        <Label visible={false} backgroundColor="#949494">
+          <Font color="#fff" size={12} />
         </Label>
       </Crosshair>
       <Legend
-        verticalAlignment="bottom"
-        horizontalAlignment="center"
-        itemTextPosition="bottom"
+      // verticalAlignment="left"
+      // horizontalAlignment="center"
+      // itemTextPosition="bottom"
       />
       <Title text="Energy Consumption in 2004">
         <Subtitle text="(Millions of Tons, Oil Equivalent)" />
@@ -70,5 +55,5 @@ const SpeedGpsGraph = () => {
       <Tooltip enabled={true} />
     </Chart>
   );
-}
+};
 export default SpeedGpsGraph;
