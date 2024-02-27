@@ -75,7 +75,7 @@ const JourneyStatistics = () => {
         </div>
       </div>
 
-      <div className="flex gap-x-8  flex-wrap w-full gap-y-4 justify-center">
+      <div className="flex gap-x-8  flex-wrap w-full gap-y-4 justify-center md:px-0 sm:px-8 px-4">
        
         <div className="md:w-1/4 w-full">
           <DataDisplay />
