@@ -44,14 +44,19 @@ const SpeedGpsGraph = () => {
         </Label>
       </Crosshair>
       <Legend
-      // verticalAlignment="left"
-      // horizontalAlignment="center"
-      // itemTextPosition="bottom"
+        verticalAlignment="left"
+        horizontalAlignment="center"
+        itemTextPosition="bottom"
       />
+
       <Title text="Energy Consumption in 2004">
         <Subtitle text="(Millions of Tons, Oil Equivalent)" />
       </Title>
-      <Export enabled={true} />
+      <Export
+       verticalAlignment="left"
+        horizontalAlignment="center"
+        itemTextPosition="bottom"
+       enabled={true} />
       <Tooltip enabled={true} />
     </Chart>
   );
