@@ -1,6 +1,7 @@
 import React from "react";
 import Location from "../shared/Location";
 import SecondDataDisplay from "./SecondDataDisplay";
+import SpeedGpsGraph from "../shared/FirstGraph/SpeedGpsGraph";
 
 const SecondDataLog = () => {
   return (
@@ -67,7 +68,7 @@ const SecondDataLog = () => {
       </div>
 
       <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
-        <div className="bg-green-200 p-4 h-20 md:w-1/4 w-full">first graphic</div>
+        <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full"><SpeedGpsGraph/></div>
         <div className="bg-blue-200 p-4 h-20 md:w-2/4 w-full">Velocity display</div>
         <div className="bg-red-200 p-4 h-20 md:w-1/4 w-full">filter data</div>
       </div>

@@ -50,7 +50,7 @@ const SpeedGpsGraph = () => {
         itemTextPosition="bottom"
       />
 
-      <Title text="Ambulance B Data">
+      <Title text="Data">
         {/* <Subtitle text="(Millions of Tons, Oil Equivalent)" /> */}
       </Title>
       <Export
