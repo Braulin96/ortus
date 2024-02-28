@@ -3,9 +3,12 @@ import Location from "../shared/Location";
 import SecondDataDisplay from "./SecondDataDisplay";
 import SpeedGpsGraph from "../shared/FirstGraph/SpeedGpsGraph";
 import SelectData from "../DataLog/shared/SelectData";
+import SpeedDisplayGraph from "../shared/SecondGraph/SpeedDisplayGraph/SpeedDisplayGraph";
 
 const SecondDataLog = () => {
   return (
+    <>
+     <SpeedDisplayGraph/>
     <div
       className="mx-auto py-10 p-4 space-y-12"
       style={{ width: "100%", maxWidth: "1700px" }}
@@ -74,6 +77,8 @@ const SecondDataLog = () => {
         <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full h-fit"><SelectData/></div>
       </div>
     </div>
+   
+    </>
   );
 };
 
