@@ -1,6 +1,5 @@
-import React from "react";
 //Note: hooks
-import { useRef } from "react";
+import React, { useRef, useState } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -12,6 +11,7 @@ import {
   EffectCube,
 } from "swiper/modules";
 import "swiper/css/bundle";
+
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
@@ -23,9 +23,18 @@ const data = [
 ];
 
 const SwiperPagination = () => {
+  const pagination = {
+    clickable: true,
+
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
+
   const swiperRef = useRef();
   return (
-    <div
+    <>
+      {/* <div
       className="relative  sm:px-20 bg-green-400"
       //style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
     >
@@ -62,13 +71,7 @@ const SwiperPagination = () => {
       >
         {data.map((display, index) => (
           <SwiperSlide className="mx-auto w-full flex mb-4" key={display.id}>
-            {/* <img
-              className="h-full mx-auto mb-4 rounded-md"
-              //width={400}
-              style={{ maxHeight: "350px" }}
-              src={image.src}
-              alt={image.alt}
-            /> */}
+           
             <p>{display.alt}</p>
           </SwiperSlide>
         ))}
@@ -97,7 +100,15 @@ const SwiperPagination = () => {
           />
         </button>
       </div>
-    </div>
+    </div> */}
+      <div>
+        <Swiper pagination={pagination} modules={[Pagination]} className="h-20">
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+        </Swiper>
+      </div>
+    </>
   );
 };
 export default SwiperPagination;
