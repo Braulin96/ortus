@@ -2,6 +2,8 @@ import PickDate from "./shared/PickDate";
 import PickTime from "./shared/PickTime";
 import SelectData from "./shared/SelectData";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { GiDigitalTrace } from "react-icons/gi";
+
 
 const DataLog = () => {
   return (
@@ -9,7 +11,10 @@ const DataLog = () => {
       className="mx-auto py-10 p-4"
       style={{ width: "100%", maxWidth: "1700px" }}
     >
-        
+      <div className="mb-8 flex gap-x-2">
+        <h2 className="text-3xl"> DataLog</h2>
+        <GiDigitalTrace className="my-auto" color="gray" size={35}  />
+      </div>
       <div className="w-100 flex md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-4">
         <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-xl">
           <div className="flex justify-between mb-4">
