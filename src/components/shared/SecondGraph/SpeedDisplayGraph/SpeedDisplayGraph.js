@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import {
   CircularGauge,
   Scale,
@@ -11,18 +11,20 @@ import {
 } from "devextreme-react/circular-gauge";
 
 function customizeText({ valueText }) {
-  return `${valueText} mph`;
+  //return `${valueText} mph`
+  return `${valueText} `
 }
+
 const SpeedDisplayGraph = () => {
-  //const [value, setValue] = useState(dataSource[0].mean);
   const [gaugeValue, setGaugeValue] = useState(20);
+
   const handleInputChange = (event) => {
     const newValue = parseInt(event.target.value);
     setGaugeValue(newValue);
   };
 
   return (
-    <div id="gauge-demo ">
+    <div id="gauge-demo">
       <div className="relative">
         <CircularGauge id="gauge" value={gaugeValue}>
           <Scale startValue={10} endValue={160} tickInterval={20}>
@@ -39,19 +41,24 @@ const SpeedDisplayGraph = () => {
             <Range startValue={140} endValue={160} color="#0077BE" />
           </RangeContainer>
           <Tooltip enabled={true} />
-          <Title text="Temperature in the Greenhouse">
+          {/* <Title text="Temperature in the Greenhouse">
             <Font size={28} />
-          </Title>
+          </Title> */}
         </CircularGauge>
-        <p> testing</p>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <input
+          min={0}
+          max={160}
             type="number"
-            className="border-2 border-gray-400 p-2 bg-green-200 h-8 w-20 rounded-full"
+            placeholder="mph"
+            className="border-2 border-gray-400 p-2 h-8 w-20 rounded-full "
+            value={gaugeValue}
+            onChange={handleInputChange}
           />
         </div>
       </div>
     </div>
   );
 };
+
 export default SpeedDisplayGraph;
