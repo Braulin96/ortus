@@ -34,79 +34,59 @@ const SwiperPagination = () => {
   const swiperRef = useRef();
   return (
     <>
-      {/* <div
-      className="relative  sm:px-20 bg-green-400"
-      //style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
-    >
-      <Swiper
-        className="flex w-full relative justify-center items-center"
-        slidesPerView={"auto"}
-        loop={true}
-        centeredSlides={true}
-        spaceBetween={5}
-        //effect={"cube"}
-        grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: false,
-          shadowOffset: 20,
-          shadowScale: 0.7,
-        }}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        speed={800}
-        modules={[
-          EffectCube,
-          Pagination,
-          EffectCoverflow,
-          Autoplay,
-          Navigation,
-          Scrollbar,
-        ]}
-        onBeforeInit={(swiper) => {
-          swiperRef.current = swiper;
-        }}
+      <div
+        className="relative  sm:px-20 bg-green-400"
+        //style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
       >
-        {data.map((display, index) => (
-          <SwiperSlide className="mx-auto w-full flex mb-4" key={display.id}>
-           
-            <p>{display.alt}</p>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="z-20 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
-        <button
-          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-          onClick={() => swiperRef.current?.slidePrev()}
+        <Swiper
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          pagination={pagination}
+          modules={[Pagination]}
+          className="h-20"
         >
-          <HiArrowSmallLeft
-            color="White"
-            className="opacity-70 hover:opacity-100"
-            size={30}
-          />
-        </button>
-      </div>
-      <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
-        <button
-          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <HiArrowRight
-            color="White"
-            className="opacity-70 hover:opacity-100"
-            size={30}
-          />
-        </button>
-      </div>
-    </div> */}
-      <div>
-        <Swiper pagination={pagination} modules={[Pagination]} className="h-20">
           <SwiperSlide>Slide 1</SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
         </Swiper>
+
+        <div className="z-20 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
+          <button
+            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <HiArrowSmallLeft
+              color="White"
+              className="opacity-70 hover:opacity-100"
+              size={30}
+            />
+          </button>
+        </div>
+        <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+          <button
+            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <HiArrowSmallLeft
+              color="White"
+              className="opacity-70 hover:opacity-100"
+              size={30}
+            />
+          </button>
+        </div>
+        <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+          <button
+            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <HiArrowRight
+              color="White"
+              className="opacity-70 hover:opacity-100"
+              size={30}
+            />
+          </button>
+        </div>
       </div>
     </>
   );
