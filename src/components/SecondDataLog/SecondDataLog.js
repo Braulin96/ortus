@@ -17,7 +17,7 @@ const SecondDataLog = () => {
           <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 ">
             <Location currentHeight={600} />
           </div>
-          <div className="bg-blue-500 lg:w-1/3  w-full py-4 sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
+          <div className=" lg:w-1/3  w-full py-4 sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
             <VideoApI/>
           </div>
           <div className="lg:w-1/3 w-full py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">

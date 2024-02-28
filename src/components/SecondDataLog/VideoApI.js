@@ -1,29 +1,43 @@
 import React, { useState, useEffect } from "react";
 
 const VideoAPI = () => {
-  const [randomImage, setRandomImage] = useState("");
+  const [cameraFeed, setCameraFeed] = useState("");
+  const [fetchError, setFetchError] = useState(null);
 
-  const fetchRandomImage = async () => {
+  const fetchCameraFeed = async () => {
     try {
-      const response = await fetch("https://source.unsplash.com/random");
-      // Get the final URL after any redirects (actual image URL)
-      const imageUrl = response.url;
-      setRandomImage(imageUrl);
+      const response = await fetch(
+        "https://s3-eu-west-1.amazonaws.com/jamcams.tfl.gov.uk/00001.03603.mp4"
+      );
+      //   const response = await fetch("js/earthcam/ecnplayerhtml5/assets/black.mp4");
+      if (response.ok) {
+        const cameraFeedUrl = response.url;
+        setCameraFeed(cameraFeedUrl);
+      } else {
+        throw new Error("Failed to fetch camera feed");
+      }
     } catch (error) {
-      console.error("Error fetching random image:", error);
+      console.error("Error fetching camera feed:", error);
+      setFetchError(error.message);
     }
   };
+
   useEffect(() => {
-    fetchRandomImage();
+    fetchCameraFeed();
   }, []);
 
   return (
-    <div>
-      <div>Video API</div>
-      <div>
-        <img src={randomImage} />
+ 
+     
+      <div className="w-full">
+        {/* Display the camera feed */}
+        {fetchError ? (
+          <p>Error fetching camera feed: {fetchError}</p>
+        ) : (
+          <video className="w-full rounded-xl shadow-lg" loop={true} controls src={cameraFeed} />
+        )}
       </div>
-    </div>
+   
   );
 };
 
