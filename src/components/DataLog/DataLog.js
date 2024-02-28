@@ -1,5 +1,7 @@
 import PickDate from "./shared/PickDate";
 import PickTime from "./shared/PickTime";
+import SelectData from "./shared/SelectData";
+
 
 const DataLog = () => {
   return (
@@ -40,6 +42,7 @@ const DataLog = () => {
       <div className="">
         <PickTime />
       </div>
+      <SelectData/>
 
       {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
 			<DemoContainer
