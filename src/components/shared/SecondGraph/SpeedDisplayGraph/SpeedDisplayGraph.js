@@ -35,10 +35,10 @@ const SpeedDisplayGraph = () => {
             <Range startValue={20} endValue={40} color="#E6E200" />
             <Range startValue={40} endValue={60} color="#77DD77" />
             <Range startValue={60} endValue={80} color="#0077BE" />
-            <Range startValue={80} endValue={100} color="#0077BE" />
-            <Range startValue={100} endValue={120} color="#0077BE" />
-            <Range startValue={120} endValue={140} color="#0077BE" />
-            <Range startValue={140} endValue={160} color="#0077BE" />
+            <Range startValue={80} endValue={100} color="#67e8f9" />
+            <Range startValue={100} endValue={120} color="#E58B00" />
+            <Range startValue={120} endValue={140} color="#8FFF94" />
+            <Range startValue={140} endValue={160} color="#67e8f9" />
           </RangeContainer>
           <Tooltip enabled={true} />
           {/* <Title text="Temperature in the Greenhouse">
