@@ -9,8 +9,9 @@ function App() {
       <header className="App-header">
        {/* <JourneyStatistics/> */}
        {/* <DataLog/> */}
-       <SecondDataLog/>
        <OverSpeedTrends/>
+       {/* <SecondDataLog/> */}
+     
       </header>
     </div>
   );
