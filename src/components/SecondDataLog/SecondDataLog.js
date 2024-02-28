@@ -1,6 +1,8 @@
 import React from "react";
 import Location from "../shared/Location";
 
+import SecondDataDisplay from "./SecondDataDisplay";
+
 const SecondDataLog = () => {
   return (
     <div
@@ -12,10 +14,9 @@ const SecondDataLog = () => {
           <Location />
         </div>
 
-        
-        <div className="lg:w-1/3 md:w-2/4 w-full  p-4 rounded-xl border-gray-100 border-2">
+        <div className="lg:w-1/3 md:w-2/4 w-full py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">
           <h2 className="text-2xl mb-4">Ambulance Data</h2>
-          <div className="flex justify-between gap-x-2  border-2 border-gray-100 p-2 rounded-xl shadow-2xl">
+          <div className="flex justify-between gap-x-2 bg-white  border-2 border-gray-100 p-2 rounded-xl shadow-2xl">
             <p className="">
               Name:
               <span className="font-semibold"> Ambulance D</span>
@@ -28,6 +29,35 @@ const SecondDataLog = () => {
               Time:
               <span className="font-semibold"> 10h40s</span>
             </p>
+          </div>
+          <div className="mt-8">
+            <SecondDataDisplay />
+          </div>
+
+          <div className="mt-8 flex flex-col justify-between gap-x-2 bg-white  border-2 border-gray-100 rounded-xl shadow-2xl gap-y-4 p-4">
+            <div className="flex gap-x-2 w-full justify-between">
+              <p className=" w-28">Location:</p>
+              <input
+                className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
+                type="text"
+              />
+            </div>
+            <div className="flex gap-x-2  w-full justify-between">
+              <p className="w-28">Speed:</p>
+              <input
+                className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
+                type="date"
+              />
+            </div>
+            <div className="flex gap-x-2  w-full justify-between">
+              <p className="w-28">Speed Limit:</p>
+              <input
+              min={0}
+              max={400}
+                className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
+                type="number"
+              />
+            </div>
           </div>
         </div>
       </div>

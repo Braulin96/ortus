@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import OpenModal from "./OpenModal";
+import OpenModal from "../shared/OpenModal";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,33 +8,38 @@ import "swiper/css";
 
 const dataList = [
   {
-    name: "Journey Distance",
-    data: "5.31",
-    unit: "Miles",
+    name: "Temperature",
+    data: "14.7",
+    unit: "C",
   },
   {
-    name: "Journey Duration",
-    data: "00:13:11",
-    unit: "s",
+    name: "Wind Speed",
+    data: "3",
+    unit: "mph",
   },
   {
-    name: "Start Location",
-    data: "Fox Street Studio",
+    name: "Wind Direction",
+    data: "WSW",
     unit: "",
   },
   {
-    name: "End Location",
-    data: "Fox Street Studio",
+    name: "W Station",
+    data: "Albermale",
     unit: "",
   },
   {
-    name: "Highest Speed",
-    data: "39",
-    unit: "MP",
+    name: "Date Updated",
+    data: "2022-09-22",
+    unit: "",
+  },
+  {
+    name: "Time Updated",
+    data: "09:00:00",
+    unit: "",
   },
 ];
 
-const DataDisplay = () => {
+const SecondDataDisplay = () => {
   const [selectedData, setSelectedData] = useState(dataList[0]);
 
   const handleItemClick = (item) => {
@@ -43,10 +48,10 @@ const DataDisplay = () => {
 
   return (
     <>
-      <div className="border-2 bg-white border-gray-100 h-80 rounded-2xl shadow-lg  flex flex-col overflow-hidden w-full">
-        <div className="text-center space-y-4 my-auto py-4 px-2">
+      <div className="border-2 bg-white border-gray-100  rounded-2xl shadow-lg flex flex-col overflow-hidden w-full">
+        <div className="text-center space-y-2 my-auto py-4 px-2">
           <h2 className="text-lg font-semibold">{selectedData.name}</h2>
-          <div className="h-20 flex">
+          <div className=" flex">
             <p className="text-4xl font-bold m-auto">
               {selectedData.data}
               <span className="text-sm font-normal">{selectedData.unit}</span>
@@ -65,10 +70,10 @@ const DataDisplay = () => {
                 breakpoints={{
                   // Customize the number of slides per view for different screen sizes
                   240: {
-                    slidesPerView: 3, 
+                    slidesPerView: 2, 
                   },
                   640: {
-                    slidesPerView: 3, 
+                    slidesPerView: 2, 
                   },
                   768: {
                     slidesPerView: 2,
@@ -82,7 +87,7 @@ const DataDisplay = () => {
                   <SwiperSlide className="flex gap-x-4 mr-4">
                     <button
                       key={index}
-                      className={`p-3 w-24 text-sm cursor-pointer rounded-lg transition-all duration-600 ${
+                      className={`p-3 w-36 text-sm cursor-pointer rounded-lg transition-all duration-600 ${
                         selectedData === list
                           ? "bg-cyan-300 bg-opacity-30"
                           : "bg-gray-100"
@@ -106,4 +111,4 @@ const DataDisplay = () => {
     </>
   );
 };
-export default DataDisplay;
+export default SecondDataDisplay;
