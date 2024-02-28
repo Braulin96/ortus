@@ -84,9 +84,8 @@ const SecondDataDisplay = () => {
                 }}
               >
                 {dataList.map((list, index) => (
-                  <SwiperSlide className="flex gap-x-4 mr-4">
+                  <SwiperSlide  key={index} className="flex gap-x-4 mr-4">
                     <button
-                      key={index}
                       className={`p-3 w-36 text-sm cursor-pointer rounded-lg transition-all duration-600 ${
                         selectedData === list
                           ? "bg-cyan-300 bg-opacity-30"
