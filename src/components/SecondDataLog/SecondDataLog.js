@@ -12,12 +12,16 @@ const SecondDataLog = () => {
         className="mx-auto py-10 p-4 space-y-12"
         style={{ width: "100%", maxWidth: "1700px" }}
       >
-        <div className="flex md:flex-row flex-col w-full justify-between gap-x-4">
-          <div className="lg:w-2/3 md:w-2/4 w-full  mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 ">
+        <div className="flex lg:flex-row flex-col w-full justify-between gap-x-4">
+          <div className="lg:w-1/3 w-full  mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 ">
             <Location />
           </div>
+          
+          <div className="bg-blue-500 lg:w-1/3  w-full py-4 sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
+            fetch goes hoverMode
+          </div>
 
-          <div className="lg:w-1/3 md:w-2/4 w-full py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">
+          <div className="lg:w-1/3 w-full py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">
             <h2 className="text-2xl mb-4">Ambulance Data</h2>
             <div className="flex justify-between gap-x-2 bg-white  border-2 border-gray-100 p-2 rounded-xl shadow-2xl">
               <p className="">
@@ -70,7 +74,7 @@ const SecondDataLog = () => {
           </div>
         </div>
 
-        <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
+        {/* <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <SpeedGpsGraph />
           </div>
@@ -92,7 +96,7 @@ const SecondDataLog = () => {
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <SelectData />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
