@@ -12,11 +12,11 @@ const DataLog = () => {
       style={{ width: "100%", maxWidth: "1700px" }}
     >
       <div className="mb-8 flex gap-x-2">
-        <h2 className="text-3xl"> DataLog</h2>
+        <h2 className="text-3xl">DataLog</h2>
         <GiDigitalTrace className="my-auto" color="gray" size={35}  />
       </div>
       <div className="w-100 flex md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-4">
-        <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-xl">
+        <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
           <div className="flex justify-between mb-4">
             <p className="text-xl">Date</p>
             <IoIosInformationCircleOutline color="gray" size={25} />
@@ -52,10 +52,11 @@ const DataLog = () => {
             </div>
           </div>
         </div>
+
       </div>
 
       <div className="mt-20 flex w-full md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-12">
-        <div className="md:w-1/2 w-full">
+        <div className="md:w-1/2 w-full h-fit p-4 border-gray-100 rounded-xl shadow-lg">
           <SelectData />
         </div>
         <div className="md:w-1/2 w-full border-2 border-gray-100 shadow-2xl rounded-xl py-4">
