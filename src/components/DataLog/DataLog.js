@@ -4,7 +4,6 @@ import SelectData from "./shared/SelectData";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { GiDigitalTrace } from "react-icons/gi";
 
-
 const DataLog = () => {
   return (
     <div
@@ -13,7 +12,7 @@ const DataLog = () => {
     >
       <div className="mb-8 flex gap-x-2">
         <h2 className="text-3xl">DataLog</h2>
-        <GiDigitalTrace className="my-auto" color="gray" size={35}  />
+        <GiDigitalTrace className="my-auto" color="gray" size={35} />
       </div>
       <div className="w-100 flex md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-4">
         <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
@@ -45,14 +44,12 @@ const DataLog = () => {
               <p className="mt-2">Start:</p>
               <PickTime />
             </div>
-
             <div className="flex gap-x-2">
               <p className="mt-2">End:</p>
               <PickTime />
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="mt-20 flex w-full md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-12">

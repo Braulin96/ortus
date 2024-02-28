@@ -11,7 +11,7 @@ const Location = () => {
   };
   return (
     <div>
-      <div className="h-96" style={{  width: "fit" }}>
+      <div className="h-80" style={{  width: "fit" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "" }}
           defaultCenter={defaultProps.center}
