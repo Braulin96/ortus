@@ -54,7 +54,7 @@ const DataLog = () => {
         </div>
       </div>
 
-      <div className="mt-20 flex w-full md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-4">
+      <div className="mt-20 flex w-full md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-12">
         <div className="md:w-1/2 w-full">
           <SelectData />
         </div>
