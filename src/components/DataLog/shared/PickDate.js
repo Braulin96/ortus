@@ -22,7 +22,7 @@ function PickDate() {
           "& .MuiInputBase-root": {
             backgroundClip: "padding-box",
             fontFamily: "inherit",
-            height: "calc(1.5em + 0.75rem + 2px)",
+            //height: "calc(1.5em + 0.75rem + 2px)",
             padding: "0.375rem 0.75rem",
             fontSize: "1rem",
             fontWeight: "400",
