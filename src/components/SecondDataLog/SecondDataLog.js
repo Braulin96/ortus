@@ -4,6 +4,7 @@ import SecondDataDisplay from "./SecondDataDisplay";
 import SpeedGpsGraph from "../shared/FirstGraph/SpeedGpsGraph";
 import SelectData from "../DataLog/shared/SelectData";
 import SpeedDisplayGraph from "../shared/SecondGraph/SpeedDisplayGraph/SpeedDisplayGraph";
+import VideoApI from "./VideoApI";
 
 const SecondDataLog = () => {
   return (
@@ -17,7 +18,7 @@ const SecondDataLog = () => {
             <Location currentHeight={600} />
           </div>
           <div className="bg-blue-500 lg:w-1/3  w-full py-4 sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
-            fetch goes hoverMode
+            <VideoApI/>
           </div>
           <div className="lg:w-1/3 w-full py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">
             <h2 className="text-2xl mb-4">Ambulance Data</h2>
