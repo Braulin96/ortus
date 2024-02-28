@@ -14,8 +14,9 @@ const animatedComponents = makeAnimated();
 const SelectData = () => {
   return <Select
   closeMenuOnSelect={false}
+  placeholder="Select your equipment..."
   components={animatedComponents}
-  defaultValue={[options[1], options[1]]}
+  //defaultValue={[options[1], options[1]]}
   isMulti
   options={options}
 />;
