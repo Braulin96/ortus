@@ -22,7 +22,7 @@ const JourneyStatistics = () => {
             style={{ width: "100%" }}
           >
             <div className="xl:w-1/4 sm:w-1/2 w-full mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100">
-              <Location />
+              <Location currentHeight={320} />
             </div>
 
             <div className="xl:w-2/4 xl:order-none order-last w-full shadow-lg rounded-2xl p-4 border-2 border-gray-100">

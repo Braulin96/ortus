@@ -1,7 +1,7 @@
 import GoogleMapReact from "google-map-react";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-const Location = () => {
+const Location = ( {currentHeight}) => {
   const defaultProps = {
     center: {
       lat: 10.99835602,
@@ -11,7 +11,7 @@ const Location = () => {
   };
   return (
     <div>
-      <div className="h-80" style={{  width: "fit" }}>
+      <div style={{  width: "fit", height: currentHeight }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "" }}
           defaultCenter={defaultProps.center}

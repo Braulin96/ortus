@@ -13,14 +13,12 @@ const SecondDataLog = () => {
         style={{ width: "100%", maxWidth: "1700px" }}
       >
         <div className="flex lg:flex-row flex-col w-full justify-between gap-x-4">
-          <div className="lg:w-1/3 w-full  mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 ">
-            <Location />
+          <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 ">
+            <Location currentHeight={600} />
           </div>
-          
           <div className="bg-blue-500 lg:w-1/3  w-full py-4 sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
             fetch goes hoverMode
           </div>
-
           <div className="lg:w-1/3 w-full py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">
             <h2 className="text-2xl mb-4">Ambulance Data</h2>
             <div className="flex justify-between gap-x-2 bg-white  border-2 border-gray-100 p-2 rounded-xl shadow-2xl">
