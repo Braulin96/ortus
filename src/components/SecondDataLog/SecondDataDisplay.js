@@ -61,11 +61,11 @@ const SecondDataDisplay = () => {
           <div className="m-auto text-center space-y-4 pt-2">
             <div className="flex gap-x-4">
               <Swiper
-                className="flex w-full space-x-4"
-                //slidesPerView={2}
+                className="flex w-full mr-4"
+               // slidesPerView={2}
                 loop={true}
                 centeredSlides={false}
-                //spaceBetween={0}
+                spaceBetween={20}
                 grabCursor={true}
                 breakpoints={{
                   // Customize the number of slides per view for different screen sizes
@@ -73,14 +73,18 @@ const SecondDataDisplay = () => {
                     slidesPerView: 2, 
                   },
                   640: {
-                    slidesPerView: 2, 
-                  },
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  1024: {
                     slidesPerView: 3, 
                   },
+                  768: {
+                    slidesPerView: 4,
+                  },
+                  1024: {
+                    slidesPerView: 2, 
+                  },
+                  1500: {
+                    slidesPerView: 3, 
+                  },
+
                 }}
               >
                 {dataList.map((list, index) => (
