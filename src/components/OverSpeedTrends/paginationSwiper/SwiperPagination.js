@@ -1,25 +1,45 @@
 //Note: hooks
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Autoplay,
-  Pagination,
-  Scrollbar,
-  EffectCoverflow,
-  EffectCube,
-} from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 
-import { GoArrowUpRight } from "react-icons/go";
-import { HiArrowSmallLeft } from "react-icons/hi2";
-import { HiArrowRight } from "react-icons/hi2";
+const SwiperModule = ({ ambulanceName }) => {
+  return (
+    <div className="w-full border-2 border-gray-100 shadow-2xl rounded-xl py-4 flex flex-col">
+      <h2 className="px-6">
+        Name:
+        <span className="font-semibold text-2xl ml-1">{ambulanceName}</span>
+      </h2>
+
+      <div className="w-full flex flex-col mt-4 ">
+        <div className="flex w-full justify-between bg-gray-100 px-6">
+          <p>Position</p>
+          <p> X:287162</p>
+        </div>
+        <div className="flex w-full justify-between px-6">
+          <p>Position</p>
+
+          <p> X:287162</p>
+        </div>
+        <div className="flex w-full justify-between bg-gray-100 px-6">
+          <p>Position</p>
+          <p> X:287162</p>
+        </div>
+        <div className="flex w-full justify-between px-6">
+          <p>Position</p>
+          <p> X:287162</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const data = [
-  { id: 1, alt: "Hero section RosaCleaning" },
-  { id: 2, alt: "Pricing RosaCleaning" },
-  { id: 3, alt: "Steps RosaCleaning" },
+  { id: 1, component: "Hero section RosaCleaning" },
+  { id: 2, component: "Pricing RosaCleaning" },
+  { id: 3, component: "Steps RosaCleaning" },
 ];
 
 const SwiperPagination = () => {
@@ -34,57 +54,35 @@ const SwiperPagination = () => {
   const swiperRef = useRef();
   return (
     <>
-      <div
-        className="relative  sm:px-20 bg-green-400"
-        //style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
-      >
+      <div className="relative sm:px-20 bg-green-400 h-64 flex">
         <Swiper
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
           pagination={pagination}
           modules={[Pagination]}
-          className="h-20"
+          className=" h-full my-auto bg-red-300"
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide className="mt-2 bg-blue-400 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance A" />
+          </SwiperSlide>
+          <SwiperSlide className="mt-4 bg-blue-400 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance B" />
+          </SwiperSlide>
+          <SwiperSlide className="mt-2 bg-blue-400 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance C" />
+          </SwiperSlide>
         </Swiper>
 
-        <div className="z-20 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <HiArrowSmallLeft
-              color="White"
-              className="opacity-70 hover:opacity-100"
-              size={30}
-            />
+        <div className="z-20 absolute left-1/2 -translate-x-20 bottom-1 center transform -translate-y-1/2 rounded-full">
+          <button className="" onClick={() => swiperRef.current?.slidePrev()}>
+            Prev
           </button>
         </div>
-        <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <HiArrowSmallLeft
-              color="White"
-              className="opacity-70 hover:opacity-100"
-              size={30}
-            />
-          </button>
-        </div>
-        <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <HiArrowRight
-              color="White"
-              className="opacity-70 hover:opacity-100"
-              size={30}
-            />
+
+        <div className="z-20 absolute right-1/2 translate-x-20 bottom-1 transform -translate-y-1/2 rounded-full">
+          <button className="" onClick={() => swiperRef.current?.slideNext()}>
+            Next
           </button>
         </div>
       </div>
