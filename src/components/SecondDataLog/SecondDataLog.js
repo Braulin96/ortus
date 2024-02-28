@@ -40,13 +40,17 @@ const SecondDataLog = () => {
               <input
                 className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
                 type="text"
+                placeholder="type..."
               />
             </div>
             <div className="flex gap-x-2  w-full justify-between">
               <p className="w-28">Speed:</p>
               <input
+               min={0}
+               max={400}
                 className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
-                type="date"
+                type="number"
+                placeholder="in mph..."
               />
             </div>
             <div className="flex gap-x-2  w-full justify-between">
@@ -56,6 +60,7 @@ const SecondDataLog = () => {
               max={400}
                 className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
                 type="number"
+                placeholder="in mph..."
               />
             </div>
           </div>
