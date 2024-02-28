@@ -1,12 +1,11 @@
 import React from "react";
 import Location from "../shared/Location";
-
 import SecondDataDisplay from "./SecondDataDisplay";
 
 const SecondDataLog = () => {
   return (
     <div
-      className="mx-auto py-10 p-4"
+      className="mx-auto py-10 p-4 space-y-12"
       style={{ width: "100%", maxWidth: "1700px" }}
     >
       <div className="flex md:flex-row flex-col w-full justify-between gap-x-4">
@@ -46,8 +45,8 @@ const SecondDataLog = () => {
             <div className="flex gap-x-2  w-full justify-between">
               <p className="w-28">Speed:</p>
               <input
-               min={0}
-               max={400}
+                min={0}
+                max={400}
                 className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
                 type="number"
                 placeholder="in mph..."
@@ -56,8 +55,8 @@ const SecondDataLog = () => {
             <div className="flex gap-x-2  w-full justify-between">
               <p className="w-28">Speed Limit:</p>
               <input
-              min={0}
-              max={400}
+                min={0}
+                max={400}
                 className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
                 type="number"
                 placeholder="in mph..."
@@ -66,7 +65,12 @@ const SecondDataLog = () => {
           </div>
         </div>
       </div>
-      <div>container 2</div>
+
+      <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
+        <div className="bg-green-200 p-4 h-20 md:w-1/4 w-full">first graphic</div>
+        <div className="bg-blue-200 p-4 h-20 md:w-2/4 w-full">Velocity display</div>
+        <div className="bg-red-200 p-4 h-20 md:w-1/4 w-full">filter data</div>
+      </div>
     </div>
   );
 };
