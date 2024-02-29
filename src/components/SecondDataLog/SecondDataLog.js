@@ -65,7 +65,6 @@ const SecondDataLog = () => {
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <SpeedGpsGraph />
           </div>
-
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-2/4 w-full">
             <p className="text-2xl"> Velocity Box</p>
             <div className="flex sm:flex-row flex-col gap-x-2">

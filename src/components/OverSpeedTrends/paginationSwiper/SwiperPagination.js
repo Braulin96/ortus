@@ -8,10 +8,7 @@ import "swiper/css/bundle";
 const SwiperModule = ({ ambulanceName }) => {
   return (
     <div className="w-full py-4 flex flex-col px-4">
-      <h2 className="">
-        Name:
-        <span className="font-semibold text-2xl ml-1">{ambulanceName}</span>
-      </h2>
+      <h2 className="font-semibold text-2xl ml-1">{ambulanceName}</h2>
       <div className="w-full flex flex-col mt-4 ">
         <div className="flex w-full justify-between bg-gray-100 ">
           <p>Position</p>
@@ -66,15 +63,11 @@ const SwiperPagination = () => {
         </Swiper>
 
         <div className="z-20 absolute left-1/2 -translate-x-20 bottom-1 center transform -translate-y-1/2 rounded-full">
-          <button onClick={() => swiperRef.current?.slidePrev()}>
-            Prev
-          </button>
+          <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
         </div>
 
         <div className="z-20 absolute right-1/2 translate-x-20 bottom-1 transform -translate-y-1/2 rounded-full">
-          <button onClick={() => swiperRef.current?.slideNext()}>
-            Next
-          </button>
+          <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
         </div>
       </div>
     </>

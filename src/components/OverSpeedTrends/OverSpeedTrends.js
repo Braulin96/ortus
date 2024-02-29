@@ -2,13 +2,14 @@ import React from "react";
 import { BsSpeedometer } from "react-icons/bs";
 import SpeedGpsGraph from "../shared/FirstGraph/SpeedGpsGraph";
 import SwiperPagination from "./paginationSwiper/SwiperPagination";
+import TableData from "./TableData";
 
 const OverSpeedTrends = () => {
   return (
     <div
       className="mx-auto py-10 p-4"
       style={{ width: "100%", maxWidth: "1700px" }}
-    >
+    > 
       <div className="mb-12 flex gap-x-2">
         <h2 className="text-3xl">Over Speed Trends</h2>
         <BsSpeedometer className="my-auto" color="gray" size={35} />
