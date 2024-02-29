@@ -42,10 +42,12 @@ const SwiperPagination = () => {
   const swiperSlide = useSwiperSlide();
   const swiperRef = useRef();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
 
   useEffect(() => {
     const swiper = swiperRef.current;
     if (swiper) {
+      setTotalSlides(swiper.slides.length);
       swiper.on("slideChange", () => {
         setCurrentSlide(swiper.activeIndex);
       });
@@ -54,7 +56,9 @@ const SwiperPagination = () => {
 
   return (
     <>
-      <p>Current slide is {currentSlide + 1}</p>
+      {/* <p>Current slide is {currentSlide + 1}</p> */}
+      {currentSlide === totalSlides - 1 && <p>last slide</p>}
+
       <div className="relative h-72 flex">
         <Swiper
           onBeforeInit={(swiper) => {
@@ -89,11 +93,13 @@ const SwiperPagination = () => {
 
         <div
           className={`z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-700 ${
-            currentSlide === 0 ? "opacity-10 ":""
+            currentSlide === 0 ? "opacity-10 " : ""
           }`}
         >
           <a
-            className={`my-auto ${currentSlide === 0 ? "cursor-auto" : "cursor-pointer"}`}
+            className={`my-auto ${
+              currentSlide === 0 ? "cursor-auto" : "cursor-pointer"
+            }`}
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <GrFormPrevious color="white" size={25} />
