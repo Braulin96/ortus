@@ -18,11 +18,11 @@ const SecondDataLog = () => {
             <Location currentHeight={380} />
           </div>
           <div className=" lg:w-1/3 max-h-96 w-full py-4 sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
-            <VideoApI/>
+            <VideoApI />
           </div>
-          <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 px-0 rounded-xl bg-gray-50 border-gray-100 border-2 mt-8 md:mt-0">
+          <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 px-0 rounded-xl shadow-lg border-gray-100 border-2 mt-8 md:mt-0">
             <h2 className="text-2xl mb-4">Ambulance Data</h2>
-            <div className="flex justify-between gap-x-2 bg-white  border-2 border-gray-100 p-2 rounded-xl shadow-2xl">
+            <div className="flex justify-between gap-x-2 p-2 rounded-xl">
               <p className="">
                 Name:
                 <span className="font-semibold">Ambulance</span>

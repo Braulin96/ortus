@@ -48,7 +48,7 @@ const SecondDataDisplay = () => {
 
   return (
     <>
-      <div className="border-2 bg-white border-gray-100  rounded-2xl shadow-lg flex flex-col overflow-hidden w-full">
+      <div className="border-2 border-gray-100  rounded-2xl flex flex-col overflow-hidden w-full">
         <div className="text-center space-y-2 my-auto py-4 px-2">
           <h2 className="text-lg font-semibold">{selectedData.name}</h2>
           <div className=" flex">
