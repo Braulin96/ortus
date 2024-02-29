@@ -56,9 +56,6 @@ const SwiperPagination = () => {
 
   return (
     <>
-      {/* <p>Current slide is {currentSlide + 1}</p> */}
-      {currentSlide === totalSlides - 1 && <p>last slide</p>}
-
       <div className="relative h-72 flex">
         <Swiper
           onBeforeInit={(swiper) => {
@@ -92,7 +89,7 @@ const SwiperPagination = () => {
         </Swiper>
 
         <div
-          className={`z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-700 ${
+          className={`z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-1000 ${
             currentSlide === 0 ? "opacity-10 " : ""
           }`}
         >
@@ -106,7 +103,7 @@ const SwiperPagination = () => {
           </a>
         </div>
 
-        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-700">
+        <div className={ `z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-1000} ${currentSlide === totalSlides - 1? "opacity-10 " : ""}`}>
           <button
             className="m-auto"
             onClick={() => swiperRef.current?.slideNext()}
