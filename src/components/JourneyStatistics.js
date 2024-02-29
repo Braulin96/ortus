@@ -17,18 +17,18 @@ const JourneyStatistics = () => {
       <div className="flex justify-between w-full" style={{ width: "100%" }}>
         <div className="w-full" style={{ width: "100%" }}>
           <div
-            className="flex w-full flex-wrap gap-x-8 gap-y-8"
+            className="flex md:flex-row flex-col w-full gap-x-8 gap-y-8"
             style={{ width: "100%" }}
           >
-            <div className="xl:w-1/4 sm:w-1/2 w-full mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100">
+            <div className="md:w-1/4 w-full mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100">
               <Location currentHeight={320} />
             </div>
 
-            <div className="xl:w-2/4 xl:order-none order-last w-full shadow-lg rounded-2xl p-4 border-2 border-gray-100">
+            <div className="md:w-2/4  w-full shadow-lg rounded-2xl p-4 border-2 border-gray-100">
               <SpeedGpsGraph />
             </div>
 
-            <div className="xl:w-1/5 flex-grow h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col border-2 border-gray-100">
+            <div className="md:w-1/4 w-full h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col border-2 border-gray-100">
               <div className="flex justify-between">
                 <h2 className="text-xl">Current Status</h2>
                 <OpenModal>
