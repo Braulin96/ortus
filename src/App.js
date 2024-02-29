@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header">
        <JourneyStatistics/>
-       {/* <DataLog/> */}
-       {/* <OverSpeedTrends/> */}
+       <DataLog/>
+       <OverSpeedTrends/>
        <SecondDataLog/>
      
       </header>

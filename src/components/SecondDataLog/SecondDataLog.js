@@ -82,7 +82,7 @@ const SecondDataLog = () => {
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <h2 className="text-2xl mb-8"> Parameters </h2>
             <SelectData />
-            <div className="mt-8 flex flex-col justify-between gap-x-2 bg-white  border-2 border-gray-100 rounded-xl shadow-2xl gap-y-4 p-4">
+            <div className="mt-8 flex flex-col justify-between gap-x-2 bg-white  border-2 border-gray-100 rounded-xl shadow-sm gap-y-4 p-4">
               <div className="flex gap-x-2 w-full justify-between">
                 <p className=" w-28">Location:</p>
                 <input
