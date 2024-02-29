@@ -2,7 +2,6 @@ import React from "react";
 import { BsSpeedometer } from "react-icons/bs";
 import SpeedGpsGraph from "../shared/FirstGraph/SpeedGpsGraph";
 import SwiperPagination from "./paginationSwiper/SwiperPagination";
-import TableData from "./TableData";
 
 const OverSpeedTrends = () => {
   return (

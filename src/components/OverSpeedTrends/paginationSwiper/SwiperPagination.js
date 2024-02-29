@@ -2,8 +2,15 @@
 import React, { useRef } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
 import "swiper/css/bundle";
+
 
 const SwiperModule = ({ ambulanceName }) => {
   return (
@@ -43,7 +50,7 @@ const SwiperPagination = () => {
   return (
     <>
       <div className="relative h-72 flex">
-        <Swiper
+        {/* <Swiper
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -60,15 +67,36 @@ const SwiperPagination = () => {
           <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
             <SwiperModule ambulanceName="Ambulance C" />
           </SwiperSlide>
-        </Swiper>
+        </Swiper> */}
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={false}
+        pagination={{
+          clickable: true,
+        }}
+        //navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance A" />
+          </SwiperSlide>
+          <SwiperSlide className="mt-4mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance B" />
+          </SwiperSlide>
+          <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance C" />
+          </SwiperSlide>
+      </Swiper>
 
-        <div className="z-20 absolute left-1/2 -translate-x-20 bottom-1 center transform -translate-y-1/2 rounded-full">
+        {/* <div className="z-20 absolute left-1/2 -translate-x-20 bottom-1 center transform -translate-y-1/2 rounded-full">
           <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
         </div>
 
         <div className="z-20 absolute right-1/2 translate-x-20 bottom-1 transform -translate-y-1/2 rounded-full">
           <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
-        </div>
+        </div> */}
       </div>
     </>
   );
