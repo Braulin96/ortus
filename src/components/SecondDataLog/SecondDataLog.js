@@ -73,7 +73,7 @@ const SecondDataLog = () => {
           </div>
         </div>
 
-        {/* <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
+        <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <SpeedGpsGraph />
           </div>
@@ -94,8 +94,38 @@ const SecondDataLog = () => {
           </div>
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <SelectData />
+            <div className="mt-8 flex flex-col justify-between gap-x-2 bg-white  border-2 border-gray-100 rounded-xl shadow-2xl gap-y-4 p-4">
+              <div className="flex gap-x-2 w-full justify-between">
+                <p className=" w-28">Location:</p>
+                <input
+                  className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
+                  type="text"
+                  placeholder="type..."
+                />
+              </div>
+              <div className="flex gap-x-2  w-full justify-between">
+                <p className="w-28">Speed:</p>
+                <input
+                  min={0}
+                  max={400}
+                  className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
+                  type="number"
+                  placeholder="in mph..."
+                />
+              </div>
+              <div className="flex gap-x-2  w-full justify-between">
+                <p className="w-28">Speed Limit:</p>
+                <input
+                  min={0}
+                  max={400}
+                  className="border border-gray-400 rounded-xl h-7 px-2 py-4 w-full"
+                  type="number"
+                  placeholder="in mph..."
+                />
+              </div>
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
