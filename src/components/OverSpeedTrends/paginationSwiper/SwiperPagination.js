@@ -66,6 +66,12 @@ const SwiperPagination = () => {
           <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
             <SwiperModule ambulanceName="Ambulance C" />
           </SwiperSlide>
+          <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance D" />
+          </SwiperSlide>
+          <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
+            <SwiperModule ambulanceName="Ambulance E" />
+          </SwiperSlide>
         </Swiper>
 
         <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
