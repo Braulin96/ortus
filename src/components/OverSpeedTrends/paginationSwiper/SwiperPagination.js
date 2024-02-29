@@ -69,13 +69,18 @@ const SwiperPagination = () => {
           </SwiperSlide>
         </Swiper> */}
         <Swiper
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         slidesPerView={1}
         spaceBetween={30}
         loop={false}
+        
+
         pagination={{
           clickable: true,
         }}
-        //navigation={true}
+        // navigation={{}}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
@@ -90,13 +95,13 @@ const SwiperPagination = () => {
           </SwiperSlide>
       </Swiper>
 
-        {/* <div className="z-20 absolute left-1/2 -translate-x-20 bottom-1 center transform -translate-y-1/2 rounded-full">
+        <div className="z-20 absolute left-1/2 -translate-x-20 -bottom-1 center transform -translate-y-1/2 rounded-full">
           <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
         </div>
 
-        <div className="z-20 absolute right-1/2 translate-x-20 bottom-1 transform -translate-y-1/2 rounded-full">
+        <div className="z-20 absolute right-1/2 translate-x-20 -bottom-1 transform -translate-y-1/2 rounded-full">
           <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
-        </div> */}
+        </div>
       </div>
     </>
   );
