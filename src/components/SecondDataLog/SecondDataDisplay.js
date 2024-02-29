@@ -58,7 +58,7 @@ const SecondDataDisplay = () => {
             </p>
           </div>
 
-          <div className="m-auto text-center space-y-4 pt-2">
+          <div className="m-auto text-center space-y-2 pt-2">
             <div className="flex gap-x-4">
               <Swiper
                 className="flex w-full mr-4"
@@ -105,7 +105,7 @@ const SecondDataDisplay = () => {
             </div>
           </div>
         </div>
-        <div className="bg-cyan-300  py-2  w-full text-black flex justify-center">
+        <div className="bg-cyan-300 py-2 w-full text-black flex justify-center">
           <OpenModal>
             <p className="text-gray-800 mx-auto">Know More</p>
           </OpenModal>

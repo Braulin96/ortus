@@ -34,7 +34,7 @@ const VideoAPI = () => {
         {fetchError ? (
           <p>Error fetching camera feed: {fetchError}</p>
         ) : (
-          <video className="w-full rounded-xl shadow-lg" loop={true} controls src={cameraFeed} />
+          <video className="w-full rounded-xl shadow-lg h-80" loop={true} controls src={cameraFeed} />
         )}
       </div>
    
