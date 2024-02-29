@@ -22,50 +22,50 @@ import {
 const countriesInfo = [
   {
     time: "0",
-    hydro: 60.2,
-    oil: 110.7,
-    gas: 90.5,
-    coal: 78.9,
+    nine: 60.2,
+    bodyBlues: 110.7,
+    grilleWing: 90.5,
+    RearBlues: 78.9,
     nuclear: 103.7,
   },
   {
     time: "10:00",
-    hydro: 10.8,
-    oil: 80.5,
-    gas: 5,
-    coal: 110,
+    nine: 10.8,
+    bodyBlues: 80.5,
+    grilleWing: 5,
+    RearBlues: 110,
     nuclear: 10.8,
   },
   {
     time: "11:00",
-    hydro: 38.5,
-    oil: 110.2,
-    gas: 49.5,
-    coal: 97.2,
+    nine: 38.5,
+    bodyBlues: 110.2,
+    grilleWing: 49.5,
+    RearBlues: 97.2,
     nuclear: 10.5,
   },
   {
     time: "12:00",
-    hydro: 23.8,
-    oil: 70.4,
-    gas: 43.2,
-    coal: 78.6,
+    nine: 23.8,
+    bodyBlues: 70.4,
+    grilleWing: 43.2,
+    RearBlues: 78.6,
     nuclear: 59.7,
   },
   {
     time: "13:00",
-    hydro: 18.7,
-    oil: 40.7,
-    gas: 30.6,
-    coal: 10,
+    nine: 18.7,
+    bodyBlues: 40.7,
+    grilleWing: 30.6,
+    RearBlues: 10,
     nuclear: 3.5,
   },
   {
     time: "14:00",
-    hydro: 6.7,
-    oil: 118.5,
-    gas: 0,
-    coal: 62.6,
+    nine: 6.7,
+    bodyBlues: 118.5,
+    grilleWing: 0,
+    RearBlues: 62.6,
     nuclear: 35.7,
   },
 ];
@@ -81,15 +81,15 @@ const TimeGraph = () => {
     setSwitchNine((prevState) => !prevState);
   };
 
-  const handleSwitchOilChange = () => {
+  const handleSwitchbodyBluesChange = () => {
     setSwitchBodyBlues((prevState) => !prevState);
   };
 
   const energySources = [
-    switchNine ? { value: "hydro", name: "Hydro-electric" } : "",
-    switchBodyBlues ? { value: "oil", name: "Oil" } : "",
-    switchGrile ? { value: "gas", name: "Natural gas" } : "",
-    switchRearBlues ? { value: "coal", name: "Coal" } : "",
+    switchNine ? { value: "nine", name: "999" } : "",
+    switchBodyBlues ? { value: "bodyBlues", name: "Body Blues" } : "",
+    switchGrile ? { value: "grilleWing", name: "Grille Wing" } : "",
+    switchRearBlues ? { value: "RearBlues", name: "Rear Blues" } : "",
   ];
 
   const filteredEnergySources = energySources.filter((item) => !!item);
@@ -126,7 +126,7 @@ const TimeGraph = () => {
           />
 
           <Title text="Ambulance C Data">
-            {/* <Subtitle text="(Millions of Tons, Oil Equivalent)" /> */}
+            {/* <Subtitle text="(Millions of Tons, bodyBlues Equivalent)" /> */}
           </Title>
           <Export
             verticalAlignment="left"
@@ -156,7 +156,7 @@ const TimeGraph = () => {
               size="small"
               {...label}
               checked={switchBodyBlues}
-              onChange={handleSwitchOilChange}
+              onChange={handleSwitchbodyBluesChange}
             />
             <p className="my-auto text-sm">Body Blues</p>
           </div>
@@ -199,7 +199,7 @@ const TimeGraph = () => {
                 size="small"
                 {...label}
                 checked={switchBodyBlues}
-                onChange={handleSwitchOilChange}
+                onChange={handleSwitchbodyBluesChange}
                 //color="default"
               />
               <p className="my-auto text-sm">Body Blues</p>
