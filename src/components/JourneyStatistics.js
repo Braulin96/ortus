@@ -15,7 +15,7 @@ const JourneyStatistics = () => {
       style={{ width: "100%", maxWidth: "1700px" }}
     >
       <div className="w-full flex justify-between mb-4">
-        <h1 className="text-4xl underline font-light">
+        <h1 className="text-4xl font-light">
           Customer Name
         </h1>
         <button className="px-3 py-2 border-2 bg-gray-600 rounded-full text-white font-bold hover:opacity-70 transition-all duration-700">
