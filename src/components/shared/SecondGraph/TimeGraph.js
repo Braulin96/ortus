@@ -74,7 +74,7 @@ const label = { inputProps: { "aria-label": "Switch demo" } };
 const TimeGraph = () => {
   const [switchNine, setSwitchNine] = useState(true);
   const [switchBodyBlues, setSwitchBodyBlues] = useState(true);
-  const [switchGas, setSwitchGas] = useState(true);
+  const [switchGrile, setSwitchGrile] = useState(true);
   const [switchCoal, setSwitchCoal] = useState(true);
 
   const handleSwitchNineChange = () => {
@@ -88,7 +88,7 @@ const TimeGraph = () => {
   const energySources = [
     switchNine ? { value: "hydro", name: "Hydro-electric" } : "",
     switchBodyBlues ? { value: "oil", name: "Oil" } : "",
-    switchGas ? { value: "gas", name: "Natural gas" } : "",
+    switchGrile ? { value: "gas", name: "Natural gas" } : "",
     switchCoal ? { value: "coal", name: "Coal" } : "",
   ];
 
@@ -164,8 +164,8 @@ const TimeGraph = () => {
             <Switch
               size="small"
               {...label}
-              checked={switchGas}
-              onChange={() => setSwitchGas((prevState) => !prevState)}
+              checked={switchGrile}
+              onChange={() => setSwitchGrile((prevState) => !prevState)}
             />
             <p className="my-auto text-sm">Grile Wing</p>
           </div>
@@ -210,8 +210,8 @@ const TimeGraph = () => {
               <Switch
                 size="small"
                 {...label}
-                checked={switchGas}
-                onChange={() => setSwitchGas((prevState) => !prevState)}
+                checked={switchGrile}
+                onChange={() => setSwitchGrile((prevState) => !prevState)}
                 //color="default"
               />
               <p className="my-auto text-sm">Grile Wings</p>
