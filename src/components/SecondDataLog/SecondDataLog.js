@@ -11,6 +11,7 @@ import { FaPause } from "react-icons/fa";
 import { GiPreviousButton } from "react-icons/gi";
 import { GiNextButton } from "react-icons/gi";
 import { BiSolidVideoRecording } from "react-icons/bi";
+import OpenSpeedDial from "./OpenSpeedDial";
 
 const SecondDataLog = () => {
   const [play, setPlay] = useState(false);
@@ -21,9 +22,9 @@ const SecondDataLog = () => {
         style={{ width: "100%", maxWidth: "1700px" }}
       >
         <div className="mb-12 flex gap-x-2">
-        <h2 className="text-3xl">Data Control </h2>
-         <BiSolidVideoRecording className="my-auto" color="gray" size={35} /> 
-      </div>
+          <h2 className="text-3xl">Data Control </h2>
+          <BiSolidVideoRecording className="my-auto" color="gray" size={35} />
+        </div>
         <div className="flex lg:flex-row flex-col w-full justify-between lg:gap-x-8 md:gap-x-4 gap-x-2">
           <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 h-full">
             <Location currentHeight={380} />
@@ -51,7 +52,6 @@ const SecondDataLog = () => {
           </div>
           <div className=" lg:w-1/3 max-h-96 w-full  sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
             <VideoApI />
-
             <div className="flex gap-x-4 w-full justify-center my-2 md:my-4">
               <GiPreviousButton color="gray" />
               <button onClick={() => setPlay(!play)}>
@@ -114,6 +114,7 @@ const SecondDataLog = () => {
             </div>
           </div>
         </div>
+        <OpenSpeedDial/>
       </div>
     </>
   );
