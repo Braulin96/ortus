@@ -27,17 +27,19 @@ const VideoAPI = () => {
   }, []);
 
   return (
- 
-     
-      <div className="w-full">
-        {/* Display the camera feed */}
-        {fetchError ? (
-          <p>Error fetching camera feed: {fetchError}</p>
-        ) : (
-          <video className="w-full rounded-xl shadow-lg h-80" loop={true} controls src={cameraFeed} />
-        )}
-      </div>
-   
+    <div className="w-full">
+      {/* Display the camera feed */}
+      {fetchError ? (
+        <p>Error fetching camera feed: {fetchError}</p>
+      ) : (
+        <video
+          className="w-full rounded-xl shadow-lg h-80"
+          loop={true}
+          controls
+          src={cameraFeed}
+        />
+      )}
+    </div>
   );
 };
 
