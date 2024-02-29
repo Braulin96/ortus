@@ -10,6 +10,7 @@ import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
 import { GiPreviousButton } from "react-icons/gi";
 import { GiNextButton } from "react-icons/gi";
+import { BiSolidVideoRecording } from "react-icons/bi";
 
 const SecondDataLog = () => {
   const [play, setPlay] = useState(false);
@@ -19,12 +20,16 @@ const SecondDataLog = () => {
         className="mx-auto py-10 p-4 space-y-12"
         style={{ width: "100%", maxWidth: "1700px" }}
       >
+        <div className="mb-12 flex gap-x-2">
+        <h2 className="text-3xl">Data Control </h2>
+         <BiSolidVideoRecording className="my-auto" color="gray" size={35} /> 
+      </div>
         <div className="flex lg:flex-row flex-col w-full justify-between gap-x-4">
           <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 h-full">
             <Location currentHeight={380} />
           </div>
 
-          <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 px-0 rounded-xl shadow-lg border-gray-100 border-2 mt-8 md:mt-0">
+          <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 rounded-xl shadow-lg border-gray-100 border-2 mt-8 md:mt-0 px-2">
             <h2 className="text-2xl mb-4">Ambulance Data</h2>
             <div className="flex justify-between gap-x-2 p-2 rounded-xl">
               <p className="">
