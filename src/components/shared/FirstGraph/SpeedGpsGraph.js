@@ -20,7 +20,6 @@ import { energySources, countriesInfo } from "./data.js";
 
 const SpeedGpsGraph = () => {
   return (
-
     <Chart id="chart" dataSource={countriesInfo} className="h-72">
       <CommonSeriesSettings type="spline" argumentField="country">
         {/* <Point hoverMode="allArgumentPoints" /> */}
@@ -51,16 +50,17 @@ const SpeedGpsGraph = () => {
       />
 
       <Title text="Data">
+        <Font size={24} color="gray" />
         {/* <Subtitle text="(Millions of Tons, Oil Equivalent)" /> */}
       </Title>
       <Export
-       verticalAlignment="left"
+        verticalAlignment="left"
         horizontalAlignment="center"
         itemTextPosition="bottom"
-       enabled={true} />
+        enabled={true}
+      />
       <Tooltip enabled={true} />
     </Chart>
-
   );
 };
 export default SpeedGpsGraph;
