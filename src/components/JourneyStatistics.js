@@ -1,6 +1,5 @@
 import Location from "./shared/Location";
 import SpeedGpsGraph from "./shared/FirstGraph/SpeedGpsGraph";
-import ExpandAccordion from "./shared/ExpandAccordion";
 import { FaClock } from "react-icons/fa6";
 import { RiGpsFill } from "react-icons/ri";
 import { BiSolidAmbulance } from "react-icons/bi";

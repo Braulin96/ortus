@@ -14,17 +14,17 @@ const dataList = [
   },
   {
     name: "Journey Duration",
-    data: "00:13:11",
+    data: "02:13:11",
     unit: "s",
   },
   {
     name: "Start Location",
-    data: "Fox Street Studio",
+    data: "Manchester",
     unit: "",
   },
   {
     name: "End Location",
-    data: "Fox Street Studio",
+    data: "London",
     unit: "",
   },
   {
@@ -45,9 +45,9 @@ const DataDisplay = () => {
     <>
       <div className="border-2 bg-white border-gray-100 h-80 rounded-2xl shadow-lg flex flex-col overflow-hidden w-full">
         <div className="text-center space-y-4 my-auto py-4 px-2">
-          <h2 className="text-lg font-semibold">{selectedData.name}</h2>
+          <h2 className="text-xl">{selectedData.name}</h2>
           <div className="h-20 flex">
-            <p className="text-4xl font-bold m-auto">
+            <p className="text-4xl m-auto">
               {selectedData.data}
               <span className="text-sm font-normal">{selectedData.unit}</span>
             </p>
@@ -97,9 +97,9 @@ const DataDisplay = () => {
             </div>
           </div>
         </div>
-        <div className="bg-cyan-300  py-2  w-full text-black flex justify-center">
+        <div className="bg-cyan-300  py-2  w-full flex justify-center">
           <OpenModal>
-            <p className="text-gray-800 mx-auto">Know More</p>
+            <p className="text-gray-800 mx-auto font-semibold">Know More</p>
           </OpenModal>
         </div>
       </div>
