@@ -105,7 +105,7 @@ const SwiperPagination = () => {
 
         <div className={ `z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-1000} ${currentSlide === totalSlides - 1? "opacity-10 " : ""}`}>
           <button
-            className="m-auto"
+            className={`m-auto ${ currentSlide === totalSlides -1? "cursor-auto" : "cursor-pointer"}`}
             onClick={() => swiperRef.current?.slideNext()}
           >
             <GrFormNext color="white" size={25} />
