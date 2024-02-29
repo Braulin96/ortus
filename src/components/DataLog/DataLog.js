@@ -53,7 +53,7 @@ const DataLog = () => {
         </div>
       </div>
       <div className="mt-20 flex w-full md:flex-row flex-col gap-x-8 gap-y-12">
-        <div className="md:w-1/2 w-full h-fit p-4 border-gray-100 rounded-xl shadow-lg">
+        <div className="md:w-1/2 w-full  p-4 border-gray-100 rounded-xl shadow-lg">
           <SelectData />
         </div>
         <div className="md:w-1/2 w-full border-2 border-gray-100 shadow-2xl rounded-xl py-4">
