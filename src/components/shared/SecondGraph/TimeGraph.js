@@ -72,13 +72,13 @@ const countriesInfo = [
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 const TimeGraph = () => {
-  const [switchHydro, setSwitchHydro] = useState(true);
+  const [switchNine, setSwitchNine] = useState(true);
   const [switchOil, setSwitchOil] = useState(true);
   const [switchGas, setSwitchGas] = useState(true);
   const [switchCoal, setSwitchCoal] = useState(true);
 
-  const handleSwitchHydroChange = () => {
-    setSwitchHydro((prevState) => !prevState);
+  const handleSwitchNineChange = () => {
+    setSwitchNine((prevState) => !prevState);
   };
 
   const handleSwitchOilChange = () => {
@@ -86,7 +86,7 @@ const TimeGraph = () => {
   };
 
   const energySources = [
-    switchHydro ? { value: "hydro", name: "Hydro-electric" } : "",
+    switchNine ? { value: "hydro", name: "Hydro-electric" } : "",
     switchOil ? { value: "oil", name: "Oil" } : "",
     switchGas ? { value: "gas", name: "Natural gas" } : "",
     switchCoal ? { value: "coal", name: "Coal" } : "",
@@ -145,8 +145,8 @@ const TimeGraph = () => {
             <Switch
               size="small"
               {...label}
-              checked={switchHydro}
-              onChange={handleSwitchHydroChange}
+              checked={switchNine}
+              onChange={handleSwitchNineChange}
               //color="default"
             />
             <p className="my-auto text-sm">999</p>
@@ -188,8 +188,8 @@ const TimeGraph = () => {
               <Switch
                 size="small"
                 {...label}
-                checked={switchHydro}
-                onChange={handleSwitchHydroChange}
+                checked={switchNine}
+                onChange={handleSwitchNineChange}
                 //color="default"
               />
               <p className="my-auto text-sm">999</p>
