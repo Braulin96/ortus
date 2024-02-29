@@ -75,7 +75,7 @@ const TimeGraph = () => {
   const [switchNine, setSwitchNine] = useState(true);
   const [switchBodyBlues, setSwitchBodyBlues] = useState(true);
   const [switchGrile, setSwitchGrile] = useState(true);
-  const [switchCoal, setSwitchCoal] = useState(true);
+  const [switchRearBlues, setSwitchRearBlues] = useState(true);
 
   const handleSwitchNineChange = () => {
     setSwitchNine((prevState) => !prevState);
@@ -89,7 +89,7 @@ const TimeGraph = () => {
     switchNine ? { value: "hydro", name: "Hydro-electric" } : "",
     switchBodyBlues ? { value: "oil", name: "Oil" } : "",
     switchGrile ? { value: "gas", name: "Natural gas" } : "",
-    switchCoal ? { value: "coal", name: "Coal" } : "",
+    switchRearBlues ? { value: "coal", name: "Coal" } : "",
   ];
 
   const filteredEnergySources = energySources.filter((item) => !!item);
@@ -173,8 +173,8 @@ const TimeGraph = () => {
             <Switch
               size="small"
               {...label}
-              checked={switchCoal}
-              onChange={() => setSwitchCoal((prevState) => !prevState)}
+              checked={switchRearBlues}
+              onChange={() => setSwitchRearBlues((prevState) => !prevState)}
             />
             <p className="my-auto text-sm">Rear Blues</p>
           </div>
@@ -220,8 +220,8 @@ const TimeGraph = () => {
               <Switch
                 size="small"
                 {...label}
-                checked={switchCoal}
-                onChange={() => setSwitchCoal((prevState) => !prevState)}
+                checked={switchRearBlues}
+                onChange={() => setSwitchRearBlues((prevState) => !prevState)}
                 //color="default"
               />
               <p className="my-auto text-sm">Rear Blues</p>
