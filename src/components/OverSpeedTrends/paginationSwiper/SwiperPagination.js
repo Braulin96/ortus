@@ -87,12 +87,12 @@ const SwiperPagination = () => {
             <SwiperModule ambulanceName="Ambulance E" />
           </SwiperSlide>
         </Swiper>
-        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
+        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-700">
           <button onClick={() => swiperRef.current?.slidePrev()}>
             <GrFormPrevious color="white" size={25} />
           </button>
         </div>
-        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
+        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex transition-all duration-700">
           <button
             className="m-auto"
             onClick={() => swiperRef.current?.slideNext()}
