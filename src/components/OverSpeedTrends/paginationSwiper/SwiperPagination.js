@@ -6,12 +6,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { GrFormPrevious } from "react-icons/gr";
-
-
+import { GrFormNext } from "react-icons/gr";
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 import "swiper/css/bundle";
-
 
 const SwiperModule = ({ ambulanceName }) => {
   return (
@@ -51,24 +49,6 @@ const SwiperPagination = () => {
   return (
     <>
       <div className="relative h-72 flex">
-        {/* <Swiper
-          onBeforeInit={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          pagination={pagination}
-          modules={[Pagination]}
-          className="h-full my-auto"
-        >
-          <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
-            <SwiperModule ambulanceName="Ambulance A" />
-          </SwiperSlide>
-          <SwiperSlide className="mt-4mx-auto w-full flex justify-center text-center items-center">
-            <SwiperModule ambulanceName="Ambulance B" />
-          </SwiperSlide>
-          <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
-            <SwiperModule ambulanceName="Ambulance C" />
-          </SwiperSlide>
-        </Swiper> */}
         <Swiper
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
@@ -96,12 +76,12 @@ const SwiperPagination = () => {
           </SwiperSlide>
       </Swiper>
 
-        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-1 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
-          <button className="m-auto" onClick={() => swiperRef.current?.slidePrev()}><GrFormPrevious color="white" size={25} /></button>
+        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
+          <button onClick={() => swiperRef.current?.slidePrev()}><GrFormPrevious color="white" size={25} /></button>
         </div>
 
-        <div className="z-20 absolute right-1/2 translate-x-20 -bottom-1 transform -translate-y-1/2 rounded-full">
-          <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
+        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
+          <button className="m-auto" onClick={() => swiperRef.current?.slideNext()}><GrFormNext color="white" size={25} /></button>
         </div>
       </div>
     </>
