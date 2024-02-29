@@ -7,14 +7,14 @@ import { GiDigitalTrace } from "react-icons/gi";
 const DataLog = () => {
   return (
     <div
-      className="mx-auto py-10 p-4"
+      className="mx-auto py-10 md:px-4 px-2"
       style={{ width: "100%", maxWidth: "1700px" }}
     >
       <div className="mb-10 flex gap-x-2">
         <h2 className="text-3xl">DataLog</h2>
         <GiDigitalTrace className="my-auto" color="gray" size={35} />
       </div>
-      <div className="w-full flex md:flex-row flex-col gap-x-8 gap-y-4">
+      <div className="w-full flex md:flex-row flex-col lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
         <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
           <div className="flex justify-between mb-4">
             <p className="text-xl">Date</p>
@@ -51,7 +51,7 @@ const DataLog = () => {
           </div>
         </div>
       </div>
-      <div className="md:mt-8 mt-4 flex w-full md:flex-row flex-col gap-x-8 gap-y-4">
+      <div className="md:mt-8 mt-4 flex w-full md:flex-row flex-col lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
         <div className="md:w-1/2 w-full p-4 border-2 border-gray-100 rounded-xl shadow-lg">
           <SelectData />
         </div>
