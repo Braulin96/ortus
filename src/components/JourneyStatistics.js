@@ -11,7 +11,7 @@ import TimeGraph from "./shared/SecondGraph/TimeGraph";
 const JourneyStatistics = () => {
   return (
     <div
-      className="w-full flex flex-col gap-y-8 mx-auto md:px-4 px-2"
+      className="w-full flex flex-col gap-y-8 mx-auto md:px-8 px-2"
       style={{ width: "100%", maxWidth: "1700px" }}
     >
       <div className="w-full flex justify-between mb-4">

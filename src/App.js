@@ -7,10 +7,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       {/* <JourneyStatistics/> */}
-       {/* <DataLog/> */}
-       {/* <OverSpeedTrends/> */}
-       <SecondDataLog/>
+        <div className="flex flex-col gap-y-28 mt-10">
+          <JourneyStatistics />
+          <DataLog />
+          <OverSpeedTrends />
+          <SecondDataLog />
+        </div>
       </header>
     </div>
   );

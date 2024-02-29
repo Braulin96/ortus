@@ -18,7 +18,7 @@ const SecondDataLog = () => {
   return (
     <>
       <div
-        className="mx-auto md:px-4 px-2 space-y-12"
+        className="mx-auto md:px-8 px-2 space-y-12"
         style={{ width: "100%", maxWidth: "1700px" }}
       >
         <div className="mb-12 flex gap-x-2">
