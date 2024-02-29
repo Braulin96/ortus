@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { GrFormPrevious } from "react-icons/gr";
 
 
 // import required modules
@@ -95,8 +96,8 @@ const SwiperPagination = () => {
           </SwiperSlide>
       </Swiper>
 
-        <div className="z-20 absolute left-1/2 -translate-x-20 -bottom-1 center transform -translate-y-1/2 rounded-full">
-          <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
+        <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-1 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
+          <button className="m-auto" onClick={() => swiperRef.current?.slidePrev()}><GrFormPrevious color="white" size={25} /></button>
         </div>
 
         <div className="z-20 absolute right-1/2 translate-x-20 -bottom-1 transform -translate-y-1/2 rounded-full">
