@@ -17,14 +17,14 @@ const SecondDataLog = () => {
   return (
     <>
       <div
-        className="mx-auto py-10 p-4 space-y-12"
+        className="mx-auto md:px-4 px-2 space-y-12"
         style={{ width: "100%", maxWidth: "1700px" }}
       >
         <div className="mb-12 flex gap-x-2">
         <h2 className="text-3xl">Data Control </h2>
          <BiSolidVideoRecording className="my-auto" color="gray" size={35} /> 
       </div>
-        <div className="flex lg:flex-row flex-col w-full justify-between gap-x-4">
+        <div className="flex lg:flex-row flex-col w-full justify-between lg:gap-x-8 md:gap-x-4 gap-x-2">
           <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 h-full">
             <Location currentHeight={380} />
           </div>
@@ -61,7 +61,7 @@ const SecondDataLog = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex md:flex-row flex-col gap-x-4 gap-y-4">
+        <div className="w-full flex md:flex-row flex-col lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
           <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
             <SpeedGpsGraph />
           </div>
