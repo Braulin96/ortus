@@ -10,11 +10,11 @@ import TimeGraph from "./shared/SecondGraph/TimeGraph";
 
 const JourneyStatistics = () => {
   return (
-    <div className="w-full flex flex-col gap-y-8 mx-auto" style={{ width: "100%", maxWidth:"1700px" }}>
-      <div
-        className="flex justify-between w-full"
-        style={{ width: "100%" }}
-      >
+    <div
+      className="w-full flex flex-col gap-y-8 mx-auto"
+      style={{ width: "100%", maxWidth: "1700px" }}
+    >
+      <div className="flex justify-between w-full" style={{ width: "100%" }}>
         <div className="w-full" style={{ width: "100%" }}>
           <div
             className="flex w-full flex-wrap gap-x-8 gap-y-8"
@@ -37,15 +37,16 @@ const JourneyStatistics = () => {
               </div>
 
               <div className="m-auto space-y-4">
+                
                 <div className="flex gap-x-2">
-                  <FaClock color="#5E6583" size={30} className="my-auto" />
-                  <p className="my-auto">
-                    Time:
-                    <span className="text-xl font-bold text-[#0FD6F5]">
-                      09:03:45
-                    </span>
-                  </p>
+                  <FaClock color="#5E6583" size={45} className="my-auto" />
+                  <div>
+                    <p className="my-auto text-sm">Time:</p>
+                    <p className="text-2xl">09:03:45</p>
+                  </div>
                 </div>
+
+
                 <div className="flex gap-x-2">
                   <RiGpsFill color="#5E6583" size={30} className="my-auto" />
                   <p className="my-auto ">
