@@ -2,13 +2,13 @@
 import React, { useRef } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css/bundle";
 
 const SwiperModule = ({ ambulanceName }) => {
@@ -38,34 +38,26 @@ const SwiperModule = ({ ambulanceName }) => {
 };
 
 const SwiperPagination = () => {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
 
   const swiperRef = useRef();
   return (
     <>
       <div className="relative h-72 flex">
         <Swiper
-        onBeforeInit={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={false}
-        
-
-        pagination={{
-          clickable: true,
-        }}
-        // navigation={{}}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={false}
+          pagination={{
+            clickable: true,
+          }}
+          // navigation={{}}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
             <SwiperModule ambulanceName="Ambulance A" />
           </SwiperSlide>
           <SwiperSlide className="mt-4mx-auto w-full flex justify-center text-center items-center">
@@ -74,14 +66,21 @@ const SwiperPagination = () => {
           <SwiperSlide className="mt-2 mx-auto w-full flex justify-center text-center items-center">
             <SwiperModule ambulanceName="Ambulance C" />
           </SwiperSlide>
-      </Swiper>
+        </Swiper>
 
         <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 left-1/2 -translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
-          <button onClick={() => swiperRef.current?.slidePrev()}><GrFormPrevious color="white" size={25} /></button>
+          <button onClick={() => swiperRef.current?.slidePrev()}>
+            <GrFormPrevious color="white" size={25} />
+          </button>
         </div>
 
         <div className="z-20 absolute shadow-lg bg-opacity-100 hover:bg-opacity-70 bg-gray-400 right-1/2 translate-x-20 -bottom-2 center transform -translate-y-1/2 rounded-full h-7 aspect-square flex">
-          <button className="m-auto" onClick={() => swiperRef.current?.slideNext()}><GrFormNext color="white" size={25} /></button>
+          <button
+            className="m-auto"
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <GrFormNext color="white" size={25} />
+          </button>
         </div>
       </div>
     </>
