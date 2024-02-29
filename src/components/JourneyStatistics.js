@@ -30,44 +30,36 @@ const JourneyStatistics = () => {
 
             <div className="xl:w-1/5 flex-grow h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col border-2 border-gray-100">
               <div className="flex justify-between">
-                <h2 className="text-lg">Current Status</h2>
+                <h2 className="text-xl">Current Status</h2>
                 <OpenModal>
                   <IoIosInformationCircleOutline color="black" size={25} />
                 </OpenModal>
               </div>
-
-              <div className="m-auto space-y-4">
-                
+              <div className="m-auto space-y-4">   
                 <div className="flex gap-x-2">
-                  <FaClock color="#5E6583" size={45} className="my-auto" />
+                  <FaClock color="#67E8F9" size={45} className="my-auto opacity-70" />
                   <div>
                     <p className="my-auto text-sm">Time:</p>
-                    <p className="text-2xl">09:03:45</p>
+                    <p className="text-2xl">09:03:45 <span className="text-sm">s</span></p>
                   </div>
                 </div>
-
-
                 <div className="flex gap-x-2">
-                  <RiGpsFill color="#5E6583" size={30} className="my-auto" />
-                  <p className="my-auto ">
-                    GPS Speed:
-                    <span className="text-xl font-bold text-[#0FD6F5]">
-                      123
-                    </span>
-                  </p>
+                  <RiGpsFill color="#29E37C" size={50} className="my-auto opacity-80" />
+                  <div>
+                    <p className="my-auto text-sm">GPS Speed:</p>
+                    <p className="text-2xl">123 <span className="text-sm">m/s</span></p>
+                  </div>
                 </div>
                 <div className="flex gap-x-2">
                   <BiSolidAmbulance
-                    color="#5E6583"
-                    size={30}
-                    className="my-auto"
+                    color="#C61A05"
+                    size={40}
+                    className="my-auto opacity-80"
                   />
-                  <p className="my-auto ">
-                    Vehicle Speed:
-                    <span className="text-xl font-bold text-[#0FD6F5]">
-                      223
-                    </span>
-                  </p>
+                  <div>
+                    <p className="my-auto text-sm">Vehicle Speed:</p>
+                    <p className="text-2xl">223 <span className="text-sm">mph</span></p>
+                  </div>
                 </div>
               </div>
             </div>
