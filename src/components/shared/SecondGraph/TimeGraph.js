@@ -73,7 +73,7 @@ const countriesInfo = [
 const label = { inputProps: { "aria-label": "Switch demo" } };
 const TimeGraph = () => {
   const [switchNine, setSwitchNine] = useState(true);
-  const [switchOil, setSwitchOil] = useState(true);
+  const [switchBodyBlues, setSwitchBodyBlues] = useState(true);
   const [switchGas, setSwitchGas] = useState(true);
   const [switchCoal, setSwitchCoal] = useState(true);
 
@@ -82,12 +82,12 @@ const TimeGraph = () => {
   };
 
   const handleSwitchOilChange = () => {
-    setSwitchOil((prevState) => !prevState);
+    setSwitchBodyBlues((prevState) => !prevState);
   };
 
   const energySources = [
     switchNine ? { value: "hydro", name: "Hydro-electric" } : "",
-    switchOil ? { value: "oil", name: "Oil" } : "",
+    switchBodyBlues ? { value: "oil", name: "Oil" } : "",
     switchGas ? { value: "gas", name: "Natural gas" } : "",
     switchCoal ? { value: "coal", name: "Coal" } : "",
   ];
@@ -155,7 +155,7 @@ const TimeGraph = () => {
             <Switch
               size="small"
               {...label}
-              checked={switchOil}
+              checked={switchBodyBlues}
               onChange={handleSwitchOilChange}
             />
             <p className="my-auto text-sm">Body Blues</p>
@@ -198,7 +198,7 @@ const TimeGraph = () => {
               <Switch
                 size="small"
                 {...label}
-                checked={switchOil}
+                checked={switchBodyBlues}
                 onChange={handleSwitchOilChange}
                 //color="default"
               />
