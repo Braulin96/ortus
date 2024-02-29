@@ -50,9 +50,9 @@ const SecondDataDisplay = () => {
     <>
       <div className="border-2 border-gray-100  rounded-2xl flex flex-col overflow-hidden w-full">
         <div className="text-center space-y-2 my-auto py-4 px-2">
-          <h2 className="text-lg font-semibold">{selectedData.name}</h2>
+          <h2 className="text-xl">{selectedData.name}</h2>
           <div className=" flex">
-            <p className="text-4xl font-bold m-auto">
+            <p className="text-4xl m-auto">
               {selectedData.data}
               <span className="text-sm font-normal">{selectedData.unit}</span>
             </p>
@@ -107,7 +107,7 @@ const SecondDataDisplay = () => {
         </div>
         <div className="bg-cyan-300 py-2 w-full text-black flex justify-center">
           <OpenModal>
-            <p className="text-gray-800 mx-auto">Know More</p>
+            <p className="text-gray-800 mx-auto font-semibold">Know More</p>
           </OpenModal>
         </div>
       </div>

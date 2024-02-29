@@ -30,7 +30,7 @@ const SecondDataLog = () => {
           </div>
 
           <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 rounded-xl shadow-lg border-gray-100 border-2 mt-8 md:mt-0 px-2">
-            <h2 className="text-2xl mb-4">Ambulance Data</h2>
+            <h2 className="text-2xl mb-4">Analyses</h2>
             <div className="flex justify-between gap-x-2 p-2 rounded-xl">
               <p className="">
                 Name:
@@ -42,7 +42,7 @@ const SecondDataLog = () => {
               </p>
               <p className="">
                 Time:
-                <span className="font-semibold"> 10h40s</span>
+                <span className="font-semibold">10h40s</span>
               </p>
             </div>
             <div className="mt-4">

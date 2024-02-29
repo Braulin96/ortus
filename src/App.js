@@ -10,7 +10,7 @@ function App() {
        <JourneyStatistics/>
        {/* <DataLog/> */}
        {/* <OverSpeedTrends/> */}
-       {/* <SecondDataLog/> */}
+       <SecondDataLog/>
      
       </header>
     </div>
