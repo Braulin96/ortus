@@ -14,7 +14,8 @@ const DataLog = () => {
         <h2 className="text-3xl">DataLog</h2>
         <GiDigitalTrace className="my-auto" color="gray" size={35} />
       </div>
-      <div className="w-100 flex md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-4">
+
+      <div className="w-full flex md:flex-row flex-col gap-x-8 gap-y-4">
         <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
           <div className="flex justify-between mb-4">
             <p className="text-xl">Date</p>
@@ -33,7 +34,7 @@ const DataLog = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:w-1/2 w-full gap-x-8 justify-between border-2 border-gray-100 rounded-2xl p-4 shadow-xl">
+        <div className="flex flex-col md:w-1/2 w-full gap-x-8 justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-xl">
           <div className="flex justify-between mb-4">
             <p className="text-xl">Time</p>
             <IoIosInformationCircleOutline color="gray" size={25} />
@@ -51,17 +52,12 @@ const DataLog = () => {
           </div>
         </div>
       </div>
-
-      <div className="mt-20 flex w-full md:flex-row flex-col lg:gap-x-24 gap-x-12 gap-y-12">
+      <div className="mt-20 flex w-full md:flex-row flex-col gap-x-8 gap-y-12">
         <div className="md:w-1/2 w-full h-fit p-4 border-gray-100 rounded-xl shadow-lg">
           <SelectData />
         </div>
         <div className="md:w-1/2 w-full border-2 border-gray-100 shadow-2xl rounded-xl py-4">
-          <h2 className="px-6">
-            Name:
-            <span className="font-semibold text-2xl ml-1"> Ambulance C</span>
-          </h2>
-
+          <h2 className="text-xl ml-1 px-6"> Ambulance C</h2>
           <div className="w-full flex flex-col mt-4 ">
             <div className="flex w-full justify-between bg-gray-100 px-6">
               <p>Position</p>
