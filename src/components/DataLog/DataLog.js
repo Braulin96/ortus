@@ -7,7 +7,7 @@ import { GiDigitalTrace } from "react-icons/gi";
 const DataLog = () => {
   return (
     <div
-      className="mx-auto py-10 md:px-4 px-2"
+      className="mx-auto md:px-4 px-2"
       style={{ width: "100%", maxWidth: "1700px" }}
     >
       <div className="mb-10 flex gap-x-2">

@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <JourneyStatistics/>
+       {/* <JourneyStatistics/> */}
        <DataLog/>
-       {/* <OverSpeedTrends/> */}
+       <OverSpeedTrends/>
        {/* <SecondDataLog/> */}
      
       </header>
