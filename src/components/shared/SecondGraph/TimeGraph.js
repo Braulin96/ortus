@@ -21,51 +21,51 @@ import {
 
 const countriesInfo = [
   {
-    country: "USA",
+    time: "0",
     hydro: 60.2,
-    oil: 974.7,
-    gas: 550.5,
-    coal: 568.9,
-    nuclear: 203.7,
+    oil: 110.7,
+    gas: 90.5,
+    coal: 78.9,
+    nuclear: 103.7,
   },
   {
-    country: "China",
-    hydro: 77.8,
-    oil: 304.5,
-    gas: 35,
-    coal: 899,
+    time: "10:00",
+    hydro: 10.8,
+    oil: 80.5,
+    gas: 5,
+    coal: 110,
     nuclear: 10.8,
   },
   {
-    country: "Russia",
+    time: "11:00",
     hydro: 38.5,
-    oil: 127.2,
-    gas: 349.5,
+    oil: 110.2,
+    gas: 49.5,
     coal: 97.2,
-    nuclear: 30.5,
+    nuclear: 10.5,
   },
   {
-    country: "Japan",
+    time: "12:00",
     hydro: 23.8,
-    oil: 227.4,
-    gas: 63.2,
-    coal: 118.6,
+    oil: 70.4,
+    gas: 43.2,
+    coal: 78.6,
     nuclear: 59.7,
   },
   {
-    country: "India",
+    time: "13:00",
     hydro: 18.7,
-    oil: 115.7,
+    oil: 40.7,
     gas: 30.6,
-    coal: 187,
+    coal: 10,
     nuclear: 3.5,
   },
   {
-    country: "Germany",
+    time: "14:00",
     hydro: 6.7,
-    oil: 120.5,
-    gas: 83.4,
-    coal: 86.6,
+    oil: 118.5,
+    gas: 0,
+    coal: 62.6,
     nuclear: 35.7,
   },
 ];
@@ -98,7 +98,7 @@ const TimeGraph = () => {
     <div className="flex md:flex-row flex-col w-full border-2 border-gray-100 rounded-2xl shadow-2xl px-2 sm:py-0 py-4">
       <div className="p-4 md:w-3/4 w-full">
         <Chart id="chart" dataSource={countriesInfo} className="h-72">
-          <CommonSeriesSettings type="spline" argumentField="country">
+          <CommonSeriesSettings type="spline" argumentField="time">
             {/* <Point hoversMode="allArgumentPoints" /> */}
             <Point visible={false} />
           </CommonSeriesSettings>
