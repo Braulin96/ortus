@@ -138,80 +138,96 @@ const TimeGraph = () => {
         </Chart>
       </div>
 
-      <div className="px-8 my-4 py-4 md:flex flex-col w-1/4 hidden">
-        <h3 className="text-center mb-4 text-lg"> Graphic</h3>
-        <div className="flex">
-          <Switch
-            {...label}
-            checked={switchHydro}
-            onChange={handleSwitchHydroChange}
-          />
-          <p className="my-auto">999</p>
-        </div>
-        <div className="flex">
-          <Switch
-            {...label}
-            checked={switchOil}
-            onChange={handleSwitchOilChange}
-          />
-          <p className="my-auto">Body Blues</p>
-        </div>
-        <div className="flex">
-          <Switch
-            {...label}
-            checked={switchGas}
-            onChange={() => setSwitchGas((prevState) => !prevState)}
-          />
-          <p className="my-auto">Grile Wing</p>
-        </div>
-        <div className="flex">
-          <Switch
-            {...label}
-            checked={switchCoal}
-            onChange={() => setSwitchCoal((prevState) => !prevState)}
-          />
-          <p className="my-auto">Rear Blues</p>
+      <div className="px-8 my-auto py-4 md:flex flex-col w-1/4 hidden border border-gray-100 rounded-2xl shadow-sm">
+        <h3 className="text-center mb-4">Select Data</h3>
+        <div className="flex flex-col gap-y-2 mx-auto">
+          <div className="flex gap-x-1">
+            <Switch
+              size="small"
+              {...label}
+              checked={switchHydro}
+              onChange={handleSwitchHydroChange}
+              //color="default"
+            />
+            <p className="my-auto text-sm">999</p>
+          </div>
+          <div className="flex gap-x-1">
+            <Switch
+              size="small"
+              {...label}
+              checked={switchOil}
+              onChange={handleSwitchOilChange}
+            />
+            <p className="my-auto text-sm">Body Blues</p>
+          </div>
+          <div className="flex gap-x-1">
+            <Switch
+              size="small"
+              {...label}
+              checked={switchGas}
+              onChange={() => setSwitchGas((prevState) => !prevState)}
+            />
+            <p className="my-auto text-sm">Grile Wing</p>
+          </div>
+          <div className="flex gap-x-1">
+            <Switch
+              size="small"
+              {...label}
+              checked={switchCoal}
+              onChange={() => setSwitchCoal((prevState) => !prevState)}
+            />
+            <p className="my-auto text-sm">Rear Blues</p>
+          </div>
         </div>
       </div>
 
-      <div className="md:hidden flex flex-col">
-        <h3 className="text-center mb-4 text-lg"> Graphic</h3>
+      <div className="md:hidden flex flex-col border border-gray-100 rounded-2xl shadow-sm py-4">
+        <h3 className="text-center mb-4">Select Data</h3>
         <div className="flex justify-around w-full">
           <div>
-            <div className="flex">
+            <div className="flex gap-x-1">
               <Switch
+                size="small"
                 {...label}
                 checked={switchHydro}
                 onChange={handleSwitchHydroChange}
+                //color="default"
               />
-              <p className="my-auto">999</p>
+              <p className="my-auto text-sm">999</p>
             </div>
-            <div className="flex">
+            <div className="flex gap-x-1">
               <Switch
+                size="small"
                 {...label}
                 checked={switchOil}
                 onChange={handleSwitchOilChange}
+                //color="default"
               />
-              <p className="my-auto">Body Blues</p>
+              <p className="my-auto text-sm">Body Blues</p>
             </div>
           </div>
           <div>
-            <div className="flex">
+            <div className="flex gap-x-1">
               <Switch
+                size="small"
                 {...label}
                 checked={switchGas}
                 onChange={() => setSwitchGas((prevState) => !prevState)}
+                //color="default"
               />
-              <p className="my-auto">Grile Wing</p>
+              <p className="my-auto text-sm">Grile Wings</p>
             </div>
-            <div className="flex">
+            <div className="flex gap-x-1">
               <Switch
+                size="small"
                 {...label}
                 checked={switchCoal}
                 onChange={() => setSwitchCoal((prevState) => !prevState)}
+                //color="default"
               />
-              <p className="my-auto">Rear Blues</p>
+              <p className="my-auto text-sm">Rear Blues</p>
             </div>
+            
           </div>
         </div>
       </div>
