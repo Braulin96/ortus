@@ -180,7 +180,6 @@ const TimeGraph = () => {
           </div>
         </div>
       </div>
-
       <div className="md:hidden flex flex-col border border-gray-100 rounded-2xl shadow-sm py-4">
         <h3 className="text-center mb-4">Select Data</h3>
         <div className="flex justify-around w-full">
