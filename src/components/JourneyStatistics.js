@@ -41,7 +41,7 @@ const JourneyStatistics = () => {
               <div className="flex justify-between">
                 <h2 className="text-xl">Current Status</h2>
                 <OpenModal>
-                  <IoIosInformationCircleOutline color="black" size={25} />
+                  <IoIosInformationCircleOutline className="ml-auto" color="black" size={25} />
                 </OpenModal>
               </div>
               <div className="m-auto space-y-4">   
@@ -49,7 +49,7 @@ const JourneyStatistics = () => {
                   <FaClock color="#67E8F9" size={45} className="my-auto opacity-70" />
                   <div>
                     <p className="my-auto text-sm">Time:</p>
-                    <p className="text-2xl">09:03:45 <span className="text-sm">s</span></p>
+                    <p className="text-2xl">09:03:45<span className="text-sm">s</span></p>
                   </div>
                 </div>
                 <div className="flex gap-x-2">
