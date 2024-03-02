@@ -14,19 +14,19 @@ const OverSpeedTrends = () => {
         <BsSpeedometer className="my-auto" color="gray" size={35} />
       </div>
       <div className="flex md:flex-row flex-col w-full lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
-        <div className="md:w-2/3 w-full rounded-2xl border-2 border-gray-100 shadow-lg p-2">
+        <div className="md:w-2/3 w-full rounded-2xl border-2 border-gray-100 shadow-lg p-2 hover:scale-105 hover:shadow-2xl transition-all duration-700">
         <SpeedGpsGraph />
         </div>
-        <div className="md:w-1/3 w-ful border-2 border-gray-100 shadow-lg rounded-xl">
+        <div className="md:w-1/3 w-ful border-2 border-gray-100 shadow-lg rounded-xl hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <SwiperPagination />
         </div>
       </div>
       
       <div className="flex md:flex-row flex-col w-full lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4 mt-8">
-        <div className="md:w-1/3 w-full rounded-2xl border-2 border-gray-100 shadow-lg p-2">
+        <div className="md:w-1/3 w-full rounded-2xl border-2 border-gray-100 shadow-lg p-2 hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <SpeedGpsGraph />
         </div>
-        <div className="md:w-2/3 w-ful border-2 border-gray-100 shadow-lg rounded-xl">
+        <div className="md:w-2/3 w-ful border-2 border-gray-100 shadow-lg rounded-xl hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <SwiperPagination />
         </div>
       </div>

@@ -15,7 +15,7 @@ const DataLog = () => {
         <GiDigitalTrace className="my-auto" color="gray" size={35} />
       </div>
       <div className="w-full flex md:flex-row flex-col lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
-        <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
+        <div className="flex md:w-1/2 w-full flex-col justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <div className="flex justify-between mb-4">
             <p className="text-xl">Date</p>
             <IoIosInformationCircleOutline color="gray" size={25} />
@@ -33,7 +33,7 @@ const DataLog = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:w-1/2 w-full gap-x-8 justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg">
+        <div className="flex flex-col md:w-1/2 w-full gap-x-8 justify-between border-2 border-gray-100 rounded-2xl px-6 py-4 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <div className="flex justify-between mb-4">
             <p className="text-xl">Time</p>
             <IoIosInformationCircleOutline color="gray" size={25} />
@@ -52,10 +52,10 @@ const DataLog = () => {
         </div>
       </div>
       <div className="md:mt-8 mt-4 flex w-full md:flex-row flex-col lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
-        <div className="md:w-1/2 w-full p-4 border-2 border-gray-100 rounded-xl shadow-lg">
+        <div className="md:w-1/2 w-full p-4 border-2 border-gray-100 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <SelectData />
         </div>
-        <div className="md:w-1/2 w-full border-2 border-gray-100 shadow-lg rounded-xl py-4">
+        <div className="md:w-1/2 w-full border-2 border-gray-100 shadow-lg rounded-xl py-4 hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <h2 className="text-xl ml-1 px-6"> Ambulance C</h2>
           <div className="w-full flex flex-col mt-4 ">
             <div className="flex w-full justify-between bg-gray-100 px-6">

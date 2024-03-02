@@ -26,11 +26,10 @@ const SecondDataLog = () => {
           <BiSolidVideoRecording className="my-auto" color="gray" size={35} />
         </div>
         <div className="flex lg:flex-row flex-col w-full justify-between lg:gap-x-8 md:gap-x-4 gap-x-2">
-          <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100 h-full">
+          <div className="lg:w-1/3 w-full overflow-hidden rounded-2xl opacity-90 hover:opacity-100 ease-in-out shadow-lg border-2 border-gray-100 h-full hover:scale-105 hover:shadow-2xl transition-all duration-700">
             <Location currentHeight={380} />
           </div>
-
-          <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 rounded-xl shadow-lg border-gray-100 border-2 mt-8 md:mt-0 px-2">
+          <div className="lg:w-1/3 w-full max-h-96 py-4 sm:px-4 rounded-xl shadow-lg border-gray-100 border-2 mt-8 md:mt-0 px-2  hover:scale-105 hover:shadow-2xl transition-all duration-700">
             <h2 className="text-2xl mb-4">Analyses</h2>
             <div className="flex justify-between gap-x-2 p-2 rounded-xl">
               <p className="">
@@ -50,7 +49,7 @@ const SecondDataLog = () => {
               <SecondDataDisplay />
             </div>
           </div>
-          <div className=" lg:w-1/3 max-h-96 w-full  sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg">
+          <div className=" lg:w-1/3 max-h-96 w-full  sm:px-4 px-0 rounded-xl border-gray-100 border-2 mt-8 md:mt-0 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-700">
             <VideoApI />
             <div className="flex gap-x-4 w-full justify-center my-2 md:my-4">
               <GiPreviousButton color="gray" />
@@ -62,10 +61,10 @@ const SecondDataLog = () => {
           </div>
         </div>
         <div className="w-full flex md:flex-row flex-col lg:gap-x-8 md:gap-x-4 gap-x-2 gap-y-4">
-          <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
+          <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full hover:scale-105 hover:shadow-2xl transition-all duration-700">
             <SpeedGpsGraph />
           </div>
-          <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-2/4 w-full">
+          <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-2/4 w-full hover:scale-105 hover:shadow-2xl transition-all duration-700">
             <p className="text-2xl"> Velocity Box</p>
             <div className="flex sm:flex-row flex-col gap-x-2">
               <div className="sm:w-1/3 w-full">
@@ -79,7 +78,7 @@ const SecondDataLog = () => {
               </div>
             </div>
           </div>
-          <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full">
+          <div className="border-2 border-gray-100 rounded-xl shadow-lg p-4 md:w-1/4 w-full hover:scale-105 hover:shadow-2xl transition-all duration-700">
             <h2 className="text-2xl mb-8"> Parameters </h2>
             <SelectData />
             <div className="mt-8 flex flex-col justify-between gap-x-2 bg-white  border-2 border-gray-100 rounded-xl shadow-sm gap-y-4 p-4">

@@ -29,15 +29,16 @@ const JourneyStatistics = () => {
             className="flex md:flex-row flex-col w-full lg:gap-x-8 md:lg:gap-x-4 gap-x-2 gap-y-8"
             style={{ width: "100%" }}
           >
-            <div className="md:w-1/4 w-full mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500 ease-in-out shadow-lg border-2 border-gray-100">
+            <div className="md:w-1/4 w-full mr-2 ml-2 h-80 overflow-hidden rounded-2xl opacity-90 hover:opacity-100  ease-in-out shadow-lg border-2 border-gray-100 scale-100 hover:scale-105 hover:shadow-2xl transition-all duration-700">
               <Location currentHeight={320} />
             </div>
 
-            <div className="md:w-2/4  w-full shadow-lg rounded-2xl p-4 border-2 border-gray-100">
+            <div className="md:w-2/4  w-full shadow-lg rounded-2xl p-4 border-2 border-gray-100 scale-100 hover:scale-105 hover:shadow-2xl transition-all duration-700">
               <SpeedGpsGraph />
             </div>
 
-            <div className="md:w-1/4 w-full h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col border-2 border-gray-100">
+            <div className="md:w-1/4 w-full h-80 rounded-2xl shadow-lg py-4 px-6  flex flex-col border-2 border-gray-100
+             hover:scale-105 hover:shadow-2xl transition-all duration-700">
               <div className="flex justify-between">
                 <h2 className="text-xl">Current Status</h2>
                 <OpenModal>
@@ -76,10 +77,10 @@ const JourneyStatistics = () => {
         </div>
       </div>
       <div className="flex lg:gap-x-8 md:lg:gap-x-4 gap-x-2 md:flex-row flex-col w-full gap-y-4 justify-between">
-        <div className="md:w-1/3 w-full">
+        <div className="md:w-1/3 w-full hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <DataDisplay />
         </div>
-        <div className="md:w-2/3 w-full">
+        <div className="md:w-2/3 w-full hover:scale-105 hover:shadow-2xl transition-all duration-700">
           <TimeGraph />
         </div>
       </div>
